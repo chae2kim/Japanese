@@ -5,29 +5,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="theme-color" content="#F4F5F0" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#181C20" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#F8F5F0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1B1F24" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-title" content="N3">
 <meta name="description" content="JLPT N3 예문 중심 학습 덱">
 <title>N3 예문장</title>
 <style>
 :root{
-  --paper:#F4F5F0;
+  --paper:#F8F5F0;
   --card:#FFFFFF;
-  --ink:#2C3238;
-  --indigo:#2C6A8E;
-  --indigo-soft:#E7EFF4;
-  --vermilion:#C0594F;
-  --muted:#838D96;
-  --line:#E6E7E0;
-  --radius:14px;
-  --ui:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR",sans-serif;
-  --jp:"Hiragino Maru Gothic ProN","ヒラギノ丸ゴ ProN W4","Hiragino Sans","ヒラギノ角ゴシック","Yu Gothic Medium","Noto Sans JP",sans-serif;
+  --ink:#3A4046;
+  --indigo:#4E87AE;
+  --indigo-soft:#EAF2F7;
+  --vermilion:#D4776D;
+  --muted:#96999B;
+  --line:#EDE9E1;
+  --radius:18px;
+  --sys-ui:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR",sans-serif;
+  --sys-jp:"Hiragino Maru Gothic ProN","ヒラギノ丸ゴ ProN W4","Hiragino Sans","Yu Gothic Medium",sans-serif;
+  --ui:"Gowun Dodum",var(--sys-ui);
+  --jp:"M PLUS Rounded 1c","Gowun Dodum",var(--sys-jp);
 }
 @media (prefers-color-scheme: dark){
   :root{
-    --paper:#181C20; --card:#212730; --ink:#E4E6E3; --indigo:#93C3DE;
-    --indigo-soft:#26333C; --vermilion:#E28A82; --muted:#929CA5; --line:#323A42;
+    --paper:#1B1F24; --card:#252B33; --ink:#E7E4DE; --indigo:#9CC8E2;
+    --indigo-soft:#2A3640; --vermilion:#E8968E; --muted:#969DA4; --line:#363D45;
   }
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -42,6 +47,7 @@ body{
 button{font-family:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;
   -webkit-user-select:none;user-select:none;touch-action:manipulation}
 :focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
+body.sysfont{--ui:var(--sys-ui);--jp:var(--sys-jp)}
 
 /* ── 상단 바 ── */
 header{
@@ -49,11 +55,12 @@ header{
   padding:calc(10px + env(safe-area-inset-top)) 16px 0;
   border-bottom:1px solid var(--line);
 }
-.bar{display:flex;align-items:baseline;gap:10px;padding-bottom:8px}
-.mark-n3{font-family:var(--jp);font-size:19px;font-weight:600;letter-spacing:.04em}
+.bar{display:flex;align-items:center;gap:7px;padding-bottom:9px}
+#font{margin-left:auto}
+.mark-n3{font-family:var(--jp);font-size:17.5px;font-weight:700;letter-spacing:.02em}
 .dday{font-size:13px;color:var(--vermilion);font-variant-numeric:tabular-nums;font-weight:600}
 .dsub{font-size:12px;color:var(--muted)}
-.furi-btn{margin-left:auto;font-size:12.5px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:7px 13px;white-space:nowrap}
+.furi-btn{font-size:12.5px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:7px 13px;white-space:nowrap}
 .furi-btn[aria-pressed="true"]{color:var(--indigo);border-color:var(--indigo)}
 
 .chips{display:flex;gap:7px;overflow-x:auto;padding:0 0 11px;scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity}
@@ -63,7 +70,7 @@ header{
 .chip.weak[aria-pressed="true"]{background:var(--vermilion);border-color:var(--vermilion)}
 
 /* ── 진도 ── */
-.prog{display:flex;align-items:center;gap:10px;padding:12px 16px 4px}
+.prog{display:flex;align-items:center;gap:10px;padding:12px 16px 4px;max-width:620px;margin:0 auto}
 .prog-txt{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
 .prog-track{flex:1;height:3px;background:var(--line);border-radius:2px;overflow:hidden}
 .prog-fill{height:100%;background:var(--indigo);width:0;transition:width .3s ease}
@@ -118,7 +125,7 @@ body.nofuri .jp ruby rt{opacity:0}
 body.nofuri .doc ruby rt{opacity:0}
 .q{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
 .q-txt{font-family:var(--jp);font-size:clamp(16px,4.5vw,17.5px);line-height:1.9;margin-bottom:10px;word-break:keep-all}
-.opt{display:block;width:100%;text-align:left;font-family:var(--jp);font-size:15.5px;padding:13px 14px;border:1px solid var(--line);border-radius:10px;margin-bottom:7px;line-height:1.75}
+.opt{display:block;width:100%;text-align:left;font-family:var(--jp);font-size:15.5px;padding:13px 15px;border:1px solid var(--line);border-radius:14px;margin-bottom:7px;line-height:1.75}
 .opt.ok{border-color:var(--indigo);background:var(--indigo-soft);color:var(--indigo);font-weight:600}
 .opt.no{border-color:var(--vermilion);color:var(--vermilion);text-decoration:line-through}
 
@@ -141,8 +148,8 @@ body.nofuri .kex ruby rt{opacity:0}
 /* ── 문법 구분 ── */
 .drule{font-size:13px;color:var(--muted);margin-top:4px;line-height:1.6}
 .ditem{border-top:1px solid var(--line);margin-top:12px;padding-top:12px}
-.dn{display:inline-block;font-family:var(--jp);font-size:15.5px;font-weight:600;color:var(--indigo);
-  background:var(--indigo-soft);border-radius:8px;padding:3px 10px}
+.dn{display:inline-block;font-family:var(--jp);font-size:15.5px;font-weight:700;color:var(--indigo);
+  background:var(--indigo-soft);border-radius:999px;padding:4px 12px}
 .dpt{font-size:13.5px;margin-top:6px;color:var(--muted)}
 .dtb{width:100%;border-collapse:collapse;margin-top:12px;font-size:13.5px}
 .dtb th{font-size:11.5px;color:var(--muted);font-weight:500;text-align:left;
@@ -154,6 +161,26 @@ body.nofuri .kex ruby rt{opacity:0}
 .dtb ruby rt{font-size:.45em;color:var(--muted)}
 body.nofuri .dtb ruby rt{opacity:0}
 
+/* ── 아이콘 · 마스코트 · 그림 ── */
+.ic{width:1em;height:1em;display:inline-block;vertical-align:-.14em;flex:0 0 auto}
+nav .ic{width:21px;height:21px;display:block;margin:0 auto 4px}
+.mochi{display:block;color:var(--indigo);flex:0 0 auto}
+.mochi .cheek{color:var(--vermilion)}
+.vcat{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--muted);margin-bottom:12px}
+.vcat .ic{width:15px;height:15px}
+.pic{width:100%;height:auto;margin:14px 0 4px;color:var(--muted)}
+.pic .c-a{color:var(--indigo)}
+.pic .c-b{color:var(--vermilion)}
+.pic .sep{stroke:var(--line)}
+.pic .pl{font-family:var(--jp);font-size:13px;fill:currentColor;stroke:none}
+.pic .ps{font-family:var(--ui);font-size:10.5px;fill:var(--muted);stroke:none}
+.react{display:flex;align-items:center;gap:10px;margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
+.react .msg{font-size:13px;line-height:1.6}
+.react.hit .msg{color:var(--indigo)}
+.react.miss .msg{color:var(--vermilion)}
+.react.miss .mochi{color:var(--vermilion)}
+.empty .mochi{margin:0 auto 14px}
+
 /* ── 하단 탭 ── */
 nav{
   position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;
@@ -163,21 +190,23 @@ nav{
 nav button{flex:1;padding:13px 0 12px;font-size:11.5px;color:var(--muted);border-top:2px solid transparent;margin-top:-1px;min-height:50px;letter-spacing:-.02em}
 nav button[aria-selected="true"]{color:var(--indigo);border-top-color:var(--indigo);font-weight:600}
 
-.empty{text-align:center;color:var(--muted);font-size:14px;padding:48px 20px;line-height:1.9}
+.empty{text-align:center;color:var(--muted);font-size:14px;padding:52px 20px;line-height:1.9}
 </style>
 </head>
 <body>
 
 <header>
   <div class="bar">
-    <span class="mark-n3">日本語能力試験 N3</span>
+    <span class="mark-n3">日本語 N3</span>
     <span class="dday" id="dday"></span>
+    <button class="furi-btn" id="font" aria-pressed="true" title="글씨체">Aa</button>
     <button class="furi-btn" id="furi" aria-pressed="true">ふりがな</button>
   </div>
   <div class="chips" id="chips"></div>
 </header>
 
 <div class="prog">
+  <span id="progMochi"></span>
   <span class="prog-txt" id="progTxt"></span>
   <span class="prog-track"><span class="prog-fill" id="progFill"></span></span>
 </div>
@@ -185,12 +214,12 @@ nav button[aria-selected="true"]{color:var(--indigo);border-top-color:var(--indi
 <main id="list"></main>
 
 <nav>
-  <button data-tab="g" aria-selected="true">문법</button>
-  <button data-tab="v" aria-selected="false">어휘</button>
-  <button data-tab="d" aria-selected="false">구분</button>
-  <button data-tab="k" aria-selected="false">한자</button>
-  <button data-tab="c" aria-selected="false">활용</button>
-  <button data-tab="r" aria-selected="false">독해</button>
+  <button data-tab="g" aria-selected="true" data-ic="gram">문법</button>
+  <button data-tab="v" aria-selected="false" data-ic="word">어휘</button>
+  <button data-tab="d" aria-selected="false" data-ic="dist">구분</button>
+  <button data-tab="k" aria-selected="false" data-ic="kanji">한자</button>
+  <button data-tab="c" aria-selected="false" data-ic="conj">활용</button>
+  <button data-tab="r" aria-selected="false" data-ic="read">독해</button>
 </nav>
 
 <script>
@@ -648,7 +677,7 @@ const D=[
  {n:'ために',pt:'중립적 원인 (격식)',e:'雪{ゆき}の**ために** 電車{でんしゃ}が 遅{おく}れた。',t:'눈 때문에 전철이 늦었다.'},
  {n:'せいで',pt:'나쁜 결과의 탓',e:'寝{ね} 不足{ぶそく}の**せいで** ミスした。',t:'수면 부족 탓에 실수했다.'},
  {n:'おかげで',pt:'좋은 결과의 덕분',e:'先生{せんせい}の**おかげで** 合格{ごうかく}した。',t:'선생님 덕분에 합격했다.'}]},
-{id:'d21',w:11,key:'자동사 / 타동사 짝',rule:'が가 붙으면 자동사, を가 붙으면 타동사',tip:'자동사+ている은 단순한 상태, 타동사+てある는 누가 해 둔 상태. 「窓が開いている」와 「窓が開けてある」의 차이가 여기서 나온다.',th:['자동사 (～が)','타동사 (～を)','뜻'],tb:[
+{id:'d21',w:11,pic:1,key:'자동사 / 타동사 짝',rule:'が가 붙으면 자동사, を가 붙으면 타동사',tip:'자동사+ている은 단순한 상태, 타동사+てある는 누가 해 둔 상태. 「窓が開いている」와 「窓が開けてある」의 차이가 여기서 나온다.',th:['자동사 (～が)','타동사 (～を)','뜻'],tb:[
  ['開{あ}く','開{あ}ける','열리다 / 열다'],
  ['閉{し}まる','閉{し}める','닫히다 / 닫다'],
  ['つく','つける','켜지다 / 켜다'],
@@ -723,6 +752,9 @@ const RULE={
  '3cp':'불규칙. 통째로 외운다.','3pot':'불규칙. 통째로 외운다.'};
 function shuf(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 
+const HIT=['정답입니다.','잘 잡으셨어요.','바로 그거예요.','깔끔합니다.'];
+const MISS=['아쉽네요. 아래 규칙을 한 번 보세요.','★약함에 담아뒀어요. 나중에 다시 만납니다.','괜찮아요. 여기서 많이들 걸립니다.','한 번 더 보면 잡힙니다.'];
+
 const C=(function(){
   const out=[]; let n=0;
   VB.forEach(vb=>{
@@ -747,6 +779,84 @@ const C=(function(){
   });
   return out;
 })();
+
+
+/* ─────────── 아이콘 ─────────── */
+const IC={
+ gram:'<path d="M4 5h12"/><path d="M4 9.5h8"/><path d="M4 14h10"/><path d="M13.5 16.5h4"/>',
+ word:'<path d="M4 4.5h5a2 2 0 012 2V16a1.7 1.7 0 00-1.7-1.5H4z"/><path d="M16 4.5h-5a2 2 0 00-2 2V16a1.7 1.7 0 011.7-1.5H16z"/>',
+ dist:'<path d="M10 17V9"/><path d="M10 9L5 4"/><path d="M10 9l5-5"/><path d="M3 4h3v3"/><path d="M17 4h-3v3"/>',
+ kanji:'<rect x="3.5" y="3.5" width="13" height="13" rx="1.5"/><path d="M10 3.5v13"/><path d="M3.5 10h13"/>',
+ conj:'<path d="M16.5 8A6.5 6.5 0 004 6.5"/><path d="M3.5 12A6.5 6.5 0 0016 13.5"/><path d="M4 3.5V7h3.5"/><path d="M16 16.5V13h-3.5"/>',
+ read:'<path d="M5 3.5h6l4 4V15a1.5 1.5 0 01-1.5 1.5h-8.5A1.5 1.5 0 013.5 15V5A1.5 1.5 0 015 3.5z"/><path d="M11 3.5V8h4"/><path d="M6.5 11h6"/><path d="M6.5 13.5h4"/>',
+ time:'<circle cx="10" cy="10" r="6.8"/><path d="M10 6.2v4l2.6 1.7"/>',
+ work:'<rect x="4" y="3" width="12" height="14" rx="1.6"/><path d="M7 7h6"/><path d="M7 10h6"/><path d="M7 13h4"/>',
+ study:'<path d="M4 16.2l.8-3 8.4-8.4 2.2 2.2-8.4 8.4z"/><path d="M12.4 5.6l2.2 2.2"/>',
+ move:'<path d="M3.2 10h9.6"/><path d="M9.6 6.4L13.4 10l-3.8 3.6"/><path d="M16.4 5.4v9.2"/>',
+ money:'<circle cx="10" cy="10" r="6.8"/><path d="M7.6 7.4L10 10.4l2.4-3"/><path d="M7.4 11h5.2"/><path d="M10 10.4v3.4"/>',
+ people:'<circle cx="7.6" cy="7.4" r="2.4"/><circle cx="13.6" cy="8.4" r="1.9"/><path d="M3.4 16c0-2.4 1.9-3.9 4.2-3.9s4.2 1.5 4.2 3.9"/><path d="M13 12.4c2 0 3.6 1.2 3.6 3.2"/>',
+ heart:'<path d="M10 16.2s-5.9-3.6-5.9-7.4A3.1 3.1 0 0110 6.4a3.1 3.1 0 015.9 2.4c0 3.8-5.9 7.4-5.9 7.4z"/>',
+ nature:'<path d="M4.6 15.4C4.6 9 8.8 4.6 16 3.8c0 7-4.2 11.4-11.4 11.6z"/><path d="M4.6 15.4c1.8-2 3.8-3.8 6.6-5.4"/>',
+ world:'<circle cx="10" cy="10" r="6.8"/><path d="M3.2 10h13.6"/><ellipse cx="10" cy="10" rx="2.9" ry="6.8"/>',
+ tech:'<rect x="6" y="2.6" width="8" height="14.8" rx="1.8"/><path d="M9 15.2h2"/>',
+ adv:'<circle cx="10" cy="10" r="6.8"/><path d="M10 6.4v4.4"/><path d="M10 13.4v.4"/>',
+ syn:'<path d="M3.6 7.6c1.6-1.6 3.2 1.6 4.8 0s3.2 1.6 4.8 0 3.2 1.6 3.2 1.6"/><path d="M3.6 13h12.8"/>',
+ verb:'<path d="M11.4 2.6L5 11h4l-1 6.4L15 9h-4z"/>'
+};
+function icon(k,cls){return IC[k]?`<svg class="ic ${cls||''}" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IC[k]}</svg>`:'';}
+
+/* ─────────── 마스코트 ─────────── */
+const FACE={
+ sleep:{e:'<path d="M7.2 11.6h2.6"/><path d="M14.2 11.6h2.6"/>',m:'<path d="M11 15.2h2"/>',x:'<path d="M18.4 5.6h2.6l-2.6 2.8h2.6"/>'},
+ ok:{e:'<circle cx="8.5" cy="11.4" r="1.15" fill="currentColor" stroke="none"/><circle cx="15.5" cy="11.4" r="1.15" fill="currentColor" stroke="none"/>',m:'<path d="M10.5 14.9c.9.8 2.1.8 3 0"/>'},
+ happy:{e:'<path d="M6.9 12c.7-1.3 2.5-1.3 3.2 0"/><path d="M13.9 12c.7-1.3 2.5-1.3 3.2 0"/>',m:'<path d="M9.8 14.4c1.3 1.6 3.1 1.6 4.4 0"/>'},
+ proud:{e:'<path d="M6.9 12c.7-1.3 2.5-1.3 3.2 0"/><path d="M13.9 12c.7-1.3 2.5-1.3 3.2 0"/>',m:'<path d="M9.8 14.4c1.3 1.6 3.1 1.6 4.4 0"/>',x:'<path d="M20 3.4v3M18.5 4.9h3M4 5.4v2.2M2.9 6.5h2.2"/>'},
+ sad:{e:'<path d="M7 10.8l2.4 2.2M9.4 10.8L7 13"/><circle cx="15.5" cy="11.6" r="1.15" fill="currentColor" stroke="none"/>',m:'<path d="M10.5 15.6c.9-.9 2.1-.9 3 0"/>',x:'<path d="M18.6 9.4c0 1.1-.8 1.7-1.5 1.7s-1.5-.6-1.5-1.7c0-.9 1.5-2.6 1.5-2.6s1.5 1.7 1.5 2.6z" fill="currentColor" stroke="none" opacity=".45"/>'}
+};
+function mochi(mood,px){
+  const f=FACE[mood]||FACE.ok;
+  return `<svg class="mochi" style="width:${px}px;height:${px}px" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 3.4c-4.7 0-8.4 4.8-8.4 9.3 0 4.1 3.5 6.5 8.4 6.5s8.4-2.4 8.4-6.5c0-4.5-3.7-9.3-8.4-9.3z"/>
+    <circle cx="6.6" cy="14.2" r="1.25" class="cheek" fill="currentColor" stroke="none" opacity=".35"/>
+    <circle cx="17.4" cy="14.2" r="1.25" class="cheek" fill="currentColor" stroke="none" opacity=".35"/>
+    ${f.e}${f.m}${f.x||''}</svg>`;
+}
+
+/* ─────────── 자동사·타동사 그림 ─────────── */
+const PIC_JT=`<svg class="pic" viewBox="0 0 300 118" fill="none" stroke="currentColor"
+  stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <g class="c-a">
+    <rect x="34" y="26" width="46" height="58" rx="4"/><circle cx="72" cy="55" r="2.2" fill="currentColor" stroke="none"/>
+    <path d="M88 44a17 17 0 0114 11"/><path d="M99 41l4.5 4-5.5 3.2"/>
+    <text class="pl" x="64" y="102" text-anchor="middle">ドアが 開く</text>
+    <text class="ps" x="64" y="16" text-anchor="middle">자동사 · 행위자 없음</text>
+  </g>
+  <line x1="150" y1="22" x2="150" y2="92" class="sep"/>
+  <g class="c-b">
+    <circle cx="196" cy="42" r="8"/><path d="M196 51v16"/><path d="M196 56l14 6"/><path d="M190 67l-4 14M202 67l4 14"/>
+    <path d="M214 62h14"/><path d="M224 58l5.5 4-5.5 4"/>
+    <rect x="236" y="26" width="42" height="58" rx="4"/><circle cx="243" cy="55" r="2.2" fill="currentColor" stroke="none"/>
+    <text class="pl" x="228" y="102" text-anchor="middle">ドアを 開ける</text>
+    <text class="ps" x="228" y="16" text-anchor="middle">타동사 · 행위자 있음</text>
+  </g>
+</svg>`;
+
+/* ─────────── 어휘 카드 분류 ─────────── */
+const VCAT={
+ v1:['time','일상'],v2:['time','일상'],v3:['work','직장'],v4:['work','직장'],v5:['study','학습'],
+ v6:['study','학습'],v7:['move','교통'],v8:['move','교통'],v9:['heart','몸과 휴식'],v10:['heart','몸과 휴식'],
+ v11:['money','돈'],v12:['money','쇼핑'],v13:['people','인간관계'],v14:['people','인간관계'],v15:['heart','감정'],
+ v16:['heart','감정'],v17:['world','사회'],v18:['world','사회'],v19:['nature','환경'],v20:['nature','환경'],
+ v21:['tech','기술'],v22:['tech','기술'],v23:['adv','부사'],v24:['work','직장'],v25:['verb','동사'],
+ v26:['world','사회'],v27:['adv','부사'],v28:['work','직장'],v29:['work','직장'],v30:['adv','부사'],
+ v31:['people','인간관계'],v32:['people','인간관계'],v33:['adv','부사'],v34:['study','학습'],v35:['work','직장'],
+ v36:['adv','부사'],v37:['verb','동사'],v38:['people','인간관계'],v39:['adv','부사'],v40:['heart','감정'],
+ v41:['heart','몸과 휴식'],v42:['adv','부사'],v43:['work','직장'],v44:['tech','기술'],v45:['syn','유의표현'],
+ v46:['syn','유의표현'],v47:['people','인간관계'],v48:['tech','기술'],v49:['syn','유의표현'],v50:['adv','접속사'],
+ v51:['heart','감정'],v52:['syn','유의표현'],v53:['work','직장'],v54:['verb','동사'],v55:['syn','유의표현'],
+ v56:['world','사회'],v57:['adv','부사'],v58:['syn','유의표현'],v59:['verb','동사'],v60:['study','학습']
+};
 
 /* ─────────── 렌더 유틸 ─────────── */
 function ruby(s){
@@ -801,7 +911,9 @@ function cardG(x){
   </article>`;
 }
 function cardV(x){
+  const c=VCAT[x.id];
   return `<article class="card ${st.done[x.id]?'done':''} ${st.weak[x.id]?'weak':''}" data-id="${x.id}">
+    ${c?`<div class="vcat">${icon(c[0])}${esc(c[1])}</div>`:''}
     <p class="jp" style="margin-top:0">${ruby(x.e)}</p>
     <button class="reveal">해석 보기</button>
     <div class="tr" hidden>${esc(x.t)}</div>
@@ -844,6 +956,7 @@ function cardC(x){
     <div class="q-txt" style="margin-bottom:12px">${ruby(x.q)}</div>
     ${x.o.map((o,i)=>`<button class="opt" data-i="${i}">${ruby(o)}</button>`).join('')}
     <div class="ktip" hidden>${esc(x.tip)}</div>
+    <div class="react" hidden></div>
     ${acts(x)}
   </article>`;
 }
@@ -861,6 +974,7 @@ function cardD(x){
   return `<article class="card ${st.done[x.id]?'done':''} ${st.weak[x.id]?'weak':''}" data-id="${x.id}">
     <div class="kgrp"><span class="kkey">${ruby(x.key)}</span></div>
     <div class="drule">${esc(x.rule)}</div>
+    ${x.pic?PIC_JT:''}
     ${rows}${items}
     <div class="ktip">${esc(x.tip)}</div>
     ${acts(x)}
@@ -879,14 +993,19 @@ function render(){
   const el=document.getElementById('list');
   el.innerHTML = items.length
     ? items.map(x=>({g:cardG,v:cardV,r:cardR,k:cardK,d:cardD,c:cardC}[tab])(x)).join('')
-    : `<p class="empty">여기는 아직 비어 있습니다.<br>다른 주차를 골라 보세요.</p>`;
+    : `<div class="empty">${mochi(week==='weak'?'proud':'sleep',64)}${week==='weak'
+        ? '약한 항목이 없습니다.<br>지금은 전부 잡혀 있어요.'
+        : '여기는 아직 비어 있습니다.<br>다른 주차를 골라 보세요.'}</div>`;
   prog();
   window.scrollTo(0,0);
 }
 function prog(){
   const d=data(), done=d.filter(x=>st.done[x.id]).length;
+  const pct=d.length?done/d.length*100:0;
   document.getElementById('progTxt').textContent=`${done} / ${d.length} 완료`;
-  document.getElementById('progFill').style.width=(d.length?done/d.length*100:0)+'%';
+  document.getElementById('progFill').style.width=pct+'%';
+  const mood=pct===0?'sleep':pct>=100?'proud':pct>=50?'happy':'ok';
+  document.getElementById('progMochi').innerHTML=mochi(mood,26);
 }
 
 function chips(){
@@ -901,6 +1020,10 @@ function chips(){
 document.getElementById('chips').addEventListener('click',e=>{
   const b=e.target.closest('.chip'); if(!b) return;
   week=b.dataset.w; chips(); render();
+});
+/* 탭 버튼에 아이콘 주입 */
+document.querySelectorAll('nav button[data-ic]').forEach(b=>{
+  b.innerHTML=icon(b.dataset.ic)+b.textContent;
 });
 document.querySelector('nav').addEventListener('click',e=>{
   const b=e.target.closest('button[data-tab]'); if(!b) return;
@@ -927,6 +1050,11 @@ document.getElementById('list').addEventListener('click',e=>{
       card.classList.toggle('weak',!hit);
       card.querySelector('.act.dn').setAttribute('aria-pressed',String(hit));
       card.querySelector('.act.wk').setAttribute('aria-pressed',String(!hit));
+      const rc=card.querySelector('.react');
+      const msg=hit?HIT[Math.floor(Math.random()*HIT.length)]:MISS[Math.floor(Math.random()*MISS.length)];
+      rc.className='react '+(hit?'hit':'miss');
+      rc.innerHTML=mochi(hit?'happy':'sad',34)+`<span class="msg">${msg}</span>`;
+      rc.hidden=false;
     }
     return;
   }
@@ -935,6 +1063,15 @@ document.getElementById('list').addEventListener('click',e=>{
   const wk=e.target.closest('.act.wk');
   if(wk){ st.weak[id]?delete st.weak[id]:st.weak[id]=1; save(); render(); return; }
 });
+document.getElementById('font').addEventListener('click',e=>{
+  const sys=document.body.classList.toggle('sysfont');
+  e.currentTarget.setAttribute('aria-pressed',String(!sys));
+  try{ localStorage.setItem('n3deck:font',sys?'sys':'round'); }catch(err){}
+});
+try{ if(localStorage.getItem('n3deck:font')==='sys'){
+  document.body.classList.add('sysfont');
+  document.getElementById('font').setAttribute('aria-pressed','false');
+} }catch(err){}
 document.getElementById('furi').addEventListener('click',e=>{
   const on=document.body.classList.toggle('nofuri');
   e.currentTarget.setAttribute('aria-pressed',String(!on));
