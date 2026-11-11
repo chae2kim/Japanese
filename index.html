@@ -203,6 +203,16 @@ nav button[aria-selected="true"] .ic{opacity:1}
 .vcat[data-c="verb"]{--vc:#C4564B}
 .vcat .ic{color:var(--vc)}
 
+/* ── 게임 ── */
+.gbar{display:flex;align-items:center;gap:7px;margin-top:10px;flex-wrap:wrap}
+.gchip{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;
+  background:rgba(255,255,255,.22);border-radius:999px;padding:5px 11px;white-space:nowrap}
+.gchip .ic{width:13px;height:13px}
+.gbtn{color:#fff;background:rgba(255,255,255,.3)}
+.gain{display:inline-flex;align-items:center;gap:5px;font-weight:700;color:var(--indigo);
+  font-size:12.5px;margin-left:auto;white-space:nowrap}
+.lvup{background:rgba(255,255,255,.95);color:#D4760E}
+
 /* ── 히어로 배너 ── */
 .wrap{max-width:620px;margin:0 auto;padding:0 16px}
 .hero{background:var(--gr);border-radius:24px;padding:20px 20px 18px;color:#fff;
@@ -944,6 +954,95 @@ const RULE={
  '3cp':'불규칙. 통째로 외운다.','3pot':'불규칙. 통째로 외운다.'};
 function shuf(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 
+/* ─────────── 가타카나 ─────────── */
+const KANA=[['ア','아'],['イ','이'],['ウ','우'],['エ','에'],['オ','오'],
+['カ','카'],['キ','키'],['ク','쿠'],['ケ','케'],['コ','코'],
+['サ','사'],['シ','시'],['ス','스'],['セ','세'],['ソ','소'],
+['タ','타'],['チ','치'],['ツ','츠'],['テ','테'],['ト','토'],
+['ナ','나'],['ニ','니'],['ヌ','누'],['ネ','네'],['ノ','노'],
+['ハ','하'],['ヒ','히'],['フ','후'],['ヘ','헤'],['ホ','호'],
+['マ','마'],['ミ','미'],['ム','무'],['メ','메'],['モ','모'],
+['ヤ','야'],['ユ','유'],['ヨ','요'],
+['ラ','라'],['リ','리'],['ル','루'],['レ','레'],['ロ','로'],
+['ワ','와'],['ヲ','오 (조사)'],['ン','ㄴ 받침']];
+/* 모양이 닮아 헷갈리는 짝 */
+const CONF={'シ':['ツ','ソ','ン'],'ツ':['シ','ソ','ン'],'ソ':['ン','シ','ツ'],'ン':['ソ','シ','ツ'],
+'ク':['ワ','タ','ケ'],'ワ':['ク','ウ','フ'],'ウ':['ワ','ラ','フ'],'ス':['ヌ','マ','ム'],
+'ヌ':['ス','メ','ナ'],'ナ':['メ','ヌ','オ'],'メ':['ナ','ヌ','ノ'],'テ':['チ','ナ','ラ'],
+'チ':['テ','キ','ナ'],'コ':['ユ','ロ','エ'],'ユ':['コ','ヨ','ス'],'マ':['ム','ア','ヤ'],
+'ム':['マ','ワ','ユ'],'レ':['ル','ノ','リ'],'ル':['レ','ノ','リ'],'ネ':['ホ','ヲ','オ'],
+'ホ':['ネ','ヲ','オ'],'ヲ':['ラ','ネ','ヌ'],'ケ':['ク','タ','ワ'],'セ':['ヒ','サ','モ'],
+'ヒ':['セ','ト','レ'],'タ':['ク','ケ','ワ'],'オ':['ホ','ナ','ヌ']};
+
+/* N3 빈출 가타카나 단어 */
+const KWORD=[['コーヒー','커피'],['テレビ','텔레비전'],['パソコン','컴퓨터'],['スマホ','스마트폰'],
+['レストラン','레스토랑'],['ホテル','호텔'],['エレベーター','엘리베이터'],['アパート','아파트'],
+['スーパー','슈퍼마켓'],['コンビニ','편의점'],['バス','버스'],['タクシー','택시'],
+['チケット','티켓'],['カメラ','카메라'],['メール','메일'],['インターネット','인터넷'],
+['サービス','서비스'],['スケジュール','스케줄'],['アルバイト','아르바이트'],['ニュース','뉴스'],
+['スポーツ','스포츠'],['サッカー','축구'],['テニス','테니스'],['プール','수영장'],
+['ケーキ','케이크'],['パン','빵'],['ジュース','주스'],['ビール','맥주'],
+['レポート','리포트'],['テスト','테스트'],['クラス','반, 수업'],['グループ','그룹'],
+['パーティー','파티'],['プレゼント','선물'],['カード','카드'],['ポイント','포인트'],
+['イメージ','이미지'],['チャンス','기회'],['ルール','규칙'],['データ','데이터'],
+['ファイル','파일'],['ページ','페이지'],['センター','센터'],['シャツ','셔츠']];
+
+/* N3 빈출 한자어 */
+const KJ=[['時間','じかん','시간'],['会社','かいしゃ','회사'],['学校','がっこう','학교'],
+['先生','せんせい','선생님'],['友達','ともだち','친구'],['電車','でんしゃ','전철'],
+['自転車','じてんしゃ','자전거'],['病院','びょういん','병원'],['銀行','ぎんこう','은행'],
+['図書館','としょかん','도서관'],['映画','えいが','영화'],['音楽','おんがく','음악'],
+['料理','りょうり','요리'],['買い物','かいもの','쇼핑'],['旅行','りょこう','여행'],
+['仕事','しごと','일'],['会議','かいぎ','회의'],['資料','しりょう','자료'],
+['説明','せつめい','설명'],['質問','しつもん','질문'],['問題','もんだい','문제'],
+['試験','しけん','시험'],['勉強','べんきょう','공부'],['練習','れんしゅう','연습'],
+['宿題','しゅくだい','숙제'],['教室','きょうしつ','교실'],['生活','せいかつ','생활'],
+['家族','かぞく','가족'],['両親','りょうしん','부모님'],['兄弟','きょうだい','형제'],
+['子供','こども','아이'],['大人','おとな','어른'],['男性','だんせい','남성'],
+['女性','じょせい','여성'],['名前','なまえ','이름'],['住所','じゅうしょ','주소'],
+['電話','でんわ','전화'],['番号','ばんごう','번호'],['時計','とけい','시계'],
+['天気','てんき','날씨'],['季節','きせつ','계절'],['気温','きおん','기온'],
+['空気','くうき','공기'],['世界','せかい','세계'],['社会','しゃかい','사회'],
+['経済','けいざい','경제'],['文化','ぶんか','문화'],['歴史','れきし','역사'],
+['自然','しぜん','자연'],['動物','どうぶつ','동물'],['野菜','やさい','채소'],
+['果物','くだもの','과일'],['食事','しょくじ','식사'],['朝食','ちょうしょく','아침 식사'],
+['約束','やくそく','약속'],['準備','じゅんび','준비'],['洗濯','せんたく','빨래'],
+['掃除','そうじ','청소'],['散歩','さんぽ','산책'],['運動','うんどう','운동']];
+
+/* 가타카나 · 한자 문제 생성 */
+function pick3(pool,not){
+  const o=pool.filter(x=>x!==not); const r=[];
+  while(r.length<3&&o.length){ r.push(o.splice(Math.floor(Math.random()*o.length),1)[0]); }
+  return r;
+}
+const QUIZ=(function(){
+  const out=[]; let n=0;
+  const chars=KANA.map(k=>k[0]), reads=KANA.map(k=>k[1]);
+  KANA.forEach(([c,r])=>{
+    n++; out.push({id:'q'+n,cat:'kana',ttl:'가타카나 · 글자 읽기',q:`「${c}」는 어떻게 읽을까요?`,
+      _o:[r,...pick3(reads,r)],tip:`${c} = ${r}`});
+    const ds=(CONF[c]||pick3(chars,c)).slice(0,3);
+    n++; out.push({id:'q'+n,cat:'kana',ttl:'가타카나 · 한글로 찾기',q:`「${r}」에 해당하는 가타카나는?`,
+      _o:[c,...ds],tip:CONF[c]?`${c}(${r})는 ${CONF[c].join('·')}와 모양이 비슷해 자주 헷갈린다.`:`${r} = ${c}`});
+  });
+  const means=KWORD.map(w=>w[1]), words=KWORD.map(w=>w[0]);
+  KWORD.forEach(([w,m])=>{
+    n++; out.push({id:'q'+n,cat:'kana',ttl:'가타카나 · 단어 뜻',q:`「${w}」의 뜻은?`,
+      _o:[m,...pick3(means,m)],tip:`${w} = ${m}`});
+    n++; out.push({id:'q'+n,cat:'kana',ttl:'가타카나 · 단어 찾기',q:`「${m}」을(를) 가타카나로 쓰면?`,
+      _o:[w,...pick3(words,w)],tip:`${m} = ${w}`});
+  });
+  const allr=KJ.map(k=>k[1]), allw=KJ.map(k=>k[0]);
+  KJ.forEach(([w,r,m])=>{
+    n++; out.push({id:'q'+n,cat:'kanji',ttl:'빈출 한자 · 읽기',q:`「${w}」의 읽기는?`,
+      _o:[r,...pick3(allr,r)],tip:`${w} = ${r} · ${m}`});
+    n++; out.push({id:'q'+n,cat:'kanji',ttl:'빈출 한자 · 한자 찾기',q:`「${m}」을(를) 한자로 쓰면?`,
+      _o:[w,...pick3(allw,w)],tip:`${m} = ${w}(${r})`});
+  });
+  return out.map(x=>{ const o=shuf(x._o.slice()); const a=o.indexOf(x._o[0]); delete x._o;
+    return Object.assign(x,{o,a,w:1}); });
+})();
+
 const HIT=['정답입니다.','잘 잡으셨어요.','바로 그거예요.','깔끔합니다.'];
 const MISS=['아쉽네요. 아래 규칙을 한 번 보세요.','★약함에 담아뒀어요. 나중에 다시 만납니다.','괜찮아요. 여기서 많이들 걸립니다.','한 번 더 보면 잡힙니다.'];
 
@@ -957,19 +1056,19 @@ const C=(function(){
         .filter(x=>x!==k && vb.f[x] && vb.f[x]!==ans).slice(0,3).map(x=>vb.f[x]);
       const o=shuf([ans,...pool]);
       n++;
-      out.push({id:'c'+n,w:n%12+1,ttl:`${GN[vb.g]} · ${vb.m}`,
+      out.push({id:'c'+n,w:n%12+1,cat:'conj',ttl:`${GN[vb.g]} · ${vb.m}`,
         q:`「${vb.v}」의 ${label}은?`,o,a:o.indexOf(ans),tip:vb.n||RULE[vb.g+k]});
     });
   });
   TP.forEach(t=>{
     [[t.a,t.ka,'が'],[t.b,t.kb,'を']].forEach(([ans,kr,p])=>{
       const o=shuf([t.a,t.b]); n++;
-      out.push({id:'c'+n,w:n%12+1,ttl:'자동사 · 타동사',
+      out.push({id:'c'+n,w:n%12+1,cat:'conj',ttl:'자동사 · 타동사',
         q:`${t.s}${p} ＿＿＿。 — ${kr}`,o,a:o.indexOf(ans),
         tip:'が가 붙으면 자동사, を가 붙으면 타동사.'});
     });
   });
-  return out;
+  return shuf(out.concat(QUIZ));
 })();
 
 /* ─────────── 아이콘 ─────────── */
@@ -995,6 +1094,8 @@ const IC={
  verb:'<path d="M11.4 2.6L5 11h4l-1 6.4L15 9h-4z"/>',
  list:'<path d="M4 5.5h12"/><path d="M4 10h12"/><path d="M4 14.5h12"/>',
  card:'<rect x="5" y="4" width="10" height="12" rx="2"/><path d="M2.6 7v6"/><path d="M17.4 7v6"/>',
+ shuffle:'<path d="M3 5.5h3.2c1.5 0 2.4 1 3.3 2.3l2 3c.9 1.3 1.8 2.3 3.3 2.3H17"/><path d="M3 14.5h3.2c1.5 0 2.4-1 3.3-2.3"/><path d="M13.4 11.6L17 14.5l-3.6 2.6"/><path d="M13.4 2.9L17 5.5l-3.6 2.7"/>',
+ fire:'<path d="M10 17.4c2.8 0 4.8-1.9 4.8-4.4 0-3.4-3.4-4.6-2.6-8.4-2 .6-4.4 3-4.4 5.4 0 1 .4 1.8 1 2.4-.4-2 .8-3.4 1.8-4-.6 2.8 2 3.4 2 5.2 0 1.4-1 2.4-2.6 2.4s-2.8-1.1-2.8-2.7c0-.6.1-1.1.3-1.6-1 .9-1.5 2.1-1.5 3.3 0 1.4 1.2 2.4 4 2.4z"/>',
  sound:'<path d="M4 7.6h2.8L10.4 4v12L6.8 12.4H4z"/><path d="M13.2 7.6a3.4 3.4 0 010 4.8"/><path d="M15.4 5.2a6.8 6.8 0 010 9.6"/>'
 };
 function icon(k,cls){return IC[k]?`<svg class="ic ${cls||''}" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IC[k]}</svg>`:'';}
@@ -1105,7 +1206,7 @@ function ruby(s){
 const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
 
 /* ─────────── 상태 ─────────── */
-let tab='g', week='all', mode='list', idx=0;
+let tab='g', week='all', qcat='all', mode='list', idx=0;
 const ALLSETS=()=>[G,V,D,K,C,R];
 
 /* 시험일 기준 현재 주차 (1~12) */
@@ -1120,8 +1221,9 @@ try{
   const sw=localStorage.getItem('n3deck:week');
   week = sw!==null ? sw : String(NOWW);
   mode = localStorage.getItem('n3deck:mode')||'list';
+  qcat = localStorage.getItem('n3deck:qcat')||'all';
 }catch(e){ week=String(NOWW); }
-let st={done:{},weak:{}};
+let st={done:{},weak:{},pts:0,streak:0,best:0,today:0,day:''};
 const KEY='n3deck:v1';
 
 /* 저장소: 아티팩트 환경이면 window.storage, 아니면 브라우저 localStorage */
@@ -1136,7 +1238,9 @@ const store={
   }
 };
 async function load(){
-  try{ const v=await store.get(); if(v) st=JSON.parse(v); }catch(e){}
+  try{ const v=await store.get(); if(v) st=Object.assign({done:{},weak:{},pts:0,streak:0,best:0,today:0,day:''},JSON.parse(v)); }catch(e){}
+  const dk=new Date().toLocaleDateString('sv-SE');
+  if(st.day!==dk){ st.day=dk; st.today=0; st.streak=0; }
 }
 let saveT;
 function save(){
@@ -1145,8 +1249,15 @@ function save(){
 }
 
 const data=()=>({g:G,v:V,r:R,k:K,d:D,c:C}[tab]);
+const QCATS=[['all','전체'],['conj','동사 활용'],['kana','가타카나'],['kanji','빈출 한자'],['weak','★ 약함']];
+const LV=p=>Math.floor((p||0)/300)+1;
 function filtered(){
   const d=data();
+  if(tab==='c'){
+    if(qcat==='weak') return d.filter(x=>st.weak[x.id]);
+    if(qcat==='all') return d;
+    return d.filter(x=>x.cat===qcat);
+  }
   if(week==='weak') return d.filter(x=>st.weak[x.id]);
   if(week==='all') return d;
   return d.filter(x=>x.w===+week);
@@ -1288,8 +1399,25 @@ function prog(){
   let at=0,ad=0;
   ALLSETS().forEach(set=>{ at+=set.length; ad+=set.filter(x=>st.done[x.id]).length; });
   const ap=at?ad/at*100:0;
-  const scope = week==='all'?'전체':week==='weak'?'★ 약한 것':week+'주차';
   const mood=ap===0?'sleep':ap>=100?'proud':ap>=50?'happy':'ok';
+  if(tab==='c'){
+    const label=(QCATS.find(q=>q[0]===qcat)||['','전체'])[1];
+    document.getElementById('hero').innerHTML=`
+      <div class="hcol">
+        <div class="hkick">Lv.${LV(st.pts)} · ${(st.pts||0).toLocaleString()}P</div>
+        <div class="htitle">${label}</div>
+        <div class="hsub">맞힌 문제 ${done}/${d.length}</div>
+        <span class="htrack"><span class="hfill" style="width:${pct}%"></span></span>
+        <div class="gbar">
+          <span class="gchip">${icon('fire')}${st.streak||0}연속</span>
+          <span class="gchip">최고 ${st.best||0}</span>
+          <span class="gchip">오늘 ${st.today||0}문제</span>
+          <button class="gchip gbtn" id="shuf">${icon('shuffle')}섞기</button>
+        </div>
+      </div>${mochi(mood,52)}`;
+    return;
+  }
+  const scope = week==='all'?'전체':week==='weak'?'★ 약한 것':week+'주차';
   document.getElementById('hero').innerHTML=`
     <div class="hcol">
       <div class="hkick">${scope} · ${d.length}개</div>
@@ -1301,6 +1429,11 @@ function prog(){
 
 function chips(){
   const c=document.getElementById('chips');
+  if(tab==='c'){
+    c.innerHTML=QCATS.map(([v,l])=>
+      `<button class="chip ${v==='weak'?'weak':''}" data-c="${v}" aria-pressed="${qcat===v}">${l}</button>`).join('');
+    return;
+  }
   const list=[['all','전체'],['weak','★ 약함']].concat(
     Array.from({length:12},(_,i)=>[String(i+1),(i+1)+'주']));
   c.innerHTML=list.map(([v,l])=>
@@ -1311,8 +1444,9 @@ function chips(){
 /* ─────────── 이벤트 ─────────── */
 document.getElementById('chips').addEventListener('click',e=>{
   const b=e.target.closest('.chip'); if(!b) return;
-  week=b.dataset.w; idx=0; SP.stop();
-  try{ localStorage.setItem('n3deck:week',week); }catch(e){}
+  idx=0; SP.stop();
+  if(b.dataset.c!==undefined){ qcat=b.dataset.c; try{ localStorage.setItem('n3deck:qcat',qcat); }catch(err){} }
+  else { week=b.dataset.w; try{ localStorage.setItem('n3deck:week',week); }catch(err){} }
   chips(); render();
 });
 /* 탭 버튼에 아이콘 주입 */
@@ -1321,7 +1455,7 @@ document.querySelectorAll('nav button[data-ic]').forEach(b=>{
 });
 document.querySelector('nav').addEventListener('click',e=>{
   const b=e.target.closest('button[data-tab]'); if(!b) return;
-  tab=b.dataset.tab; idx=0; SP.stop();
+  tab=b.dataset.tab; idx=0; SP.stop(); chips();
   document.querySelectorAll('nav button').forEach(n=>n.setAttribute('aria-selected',n===b));
   render();
 });
@@ -1364,11 +1498,22 @@ document.getElementById('list').addEventListener('click',e=>{
       card.classList.toggle('weak',!hit);
       card.querySelector('.act.dn').setAttribute('aria-pressed',String(hit));
       card.querySelector('.act.wk').setAttribute('aria-pressed',String(!hit));
+      const lv0=LV(st.pts);
+      let gain=0;
+      if(hit){ gain=10+Math.min(st.streak,10)*2; st.pts=(st.pts||0)+gain; st.streak=(st.streak||0)+1;
+               if(st.streak>(st.best||0)) st.best=st.streak; }
+      else { st.streak=0; }
+      st.today=(st.today||0)+1;
+      const lvup = LV(st.pts)>lv0;
+      save(); prog();
       const rc=card.querySelector('.react');
       const msg=hit?HIT[Math.floor(Math.random()*HIT.length)]:MISS[Math.floor(Math.random()*MISS.length)];
       rc.className='react '+(hit?'hit':'miss');
-      rc.innerHTML=mochi(hit?'happy':'sad',34)+`<span class="msg">${msg}</span>`;
+      rc.innerHTML=mochi(hit?'happy':'sad',34)+`<span class="msg">${msg}</span>`+
+        (hit?`<span class="gain">+${gain}P${st.streak>=3?' '+icon('fire')+st.streak:''}</span>`:'');
       rc.hidden=false;
+      if(lvup){ const b=document.createElement('div'); b.className='ktip';
+        b.textContent=`레벨 ${LV(st.pts)} 달성.`; rc.after(b); }
     }
     return;
   }
@@ -1409,6 +1554,11 @@ document.addEventListener('keydown',e=>{
   if(mode!=='one') return;
   if(e.key==='ArrowRight') step(1);
   if(e.key==='ArrowLeft') step(-1);
+});
+
+document.getElementById('hero').addEventListener('click',e=>{
+  if(!e.target.closest('#shuf')) return;
+  shuf(C); idx=0; SP.stop(); render();
 });
 
 const rateBtn=document.getElementById('rate');
