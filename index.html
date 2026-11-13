@@ -8,24 +8,24 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
-<meta name="theme-color" content="#F8F5F0" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#1B1F24" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F4F3F8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1A1A23" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-title" content="N3">
 <meta name="description" content="JLPT N3 예문 중심 학습 덱">
 <title>N3 예문장</title>
 <style>
 :root{
-  --paper:#EFEDFA;
+  --paper:#F4F3F8;
   --card:#FFFFFF;
-  --ink:#2E3140;
-  --indigo:#6C4FE0;
-  --indigo-soft:#EFEBFD;
-  --vermilion:#F0608E;
-  --muted:#9A9BB0;
-  --line:#EAE8F6;
+  --ink:#3D4050;
+  --indigo:#8279BE;
+  --indigo-soft:#EFEDF8;
+  --vermilion:#CC8CA0;
+  --muted:#A3A4B4;
+  --line:#EDECF3;
   --radius:22px;
-  --sh:0 2px 16px rgba(60,50,120,.07);
-  --sh2:0 6px 24px rgba(60,50,120,.12);
+  --sh:0 2px 14px rgba(80,72,120,.055);
+  --sh2:0 5px 20px rgba(80,72,120,.09);
   --sys-ui:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR",sans-serif;
   --sys-jp:"Hiragino Maru Gothic ProN","ヒラギノ丸ゴ ProN W4","Hiragino Sans","Yu Gothic Medium",sans-serif;
   --ui:"Gowun Dodum",var(--sys-ui);
@@ -33,8 +33,8 @@
 }
 @media (prefers-color-scheme: dark){
   :root{
-    --paper:#15141F; --card:#201F2E; --ink:#E9E8F2; --indigo:#A992F5;
-    --indigo-soft:#2B2740; --vermilion:#F58AAE; --muted:#8E8DA6; --line:#2E2C41;
+    --paper:#1A1A23; --card:#24242F; --ink:#E4E3EC; --indigo:#AAA2D8;
+    --indigo-soft:#2E2C3C; --vermilion:#D9A0B2; --muted:#908FA2; --line:#32313F;
     --sh:0 2px 16px rgba(0,0,0,.3); --sh2:0 6px 24px rgba(0,0,0,.4);
   }
 }
@@ -51,7 +51,7 @@ button{font-family:inherit;color:inherit;background:none;border:0;padding:0;curs
   -webkit-user-select:none;user-select:none;touch-action:manipulation}
 :focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
 body.sysfont{--ui:var(--sys-ui);--jp:var(--sys-jp)}
-body{--gr:linear-gradient(135deg,#5470E8,#8A5CF0)}
+body{--gr:linear-gradient(135deg,#8DA0D8,#A99BD6)}
 
 /* ── 상단 바 ── */
 header{
@@ -77,7 +77,7 @@ header{
 .chip{flex:0 0 auto;font-size:13px;padding:9px 15px;border-radius:999px;border:0;background:var(--card);
   color:var(--muted);white-space:nowrap;scroll-snap-align:start;box-shadow:var(--sh);font-weight:500}
 .chip[aria-pressed="true"]{background:var(--gr);color:#fff;box-shadow:var(--sh2)}
-.chip.weak[aria-pressed="true"]{background:linear-gradient(135deg,#F2609A,#F0855E)}
+.chip.weak[aria-pressed="true"]{background:linear-gradient(135deg,#D9A0B3,#D9A99B)}
 
 /* ── 진도 ── */
 
@@ -170,38 +170,248 @@ body.nofuri .kex ruby rt{opacity:0}
 body.nofuri .dtb ruby rt{opacity:0}
 
 /* ── 탭별 색상 ── */
-body[data-tab="g"]{--indigo:#4F6FE5;--indigo-soft:#EAEEFD;--gr:linear-gradient(135deg,#5470E8,#8A5CF0)}
-body[data-tab="v"]{--indigo:#17A87C;--indigo-soft:#E6F6F0;--gr:linear-gradient(135deg,#25BC8C,#2E9FD4)}
-body[data-tab="d"]{--indigo:#8B4FD8;--indigo-soft:#F2EAFC;--gr:linear-gradient(135deg,#9256E8,#CC5AD0)}
-body[data-tab="k"]{--indigo:#DB7A2A;--indigo-soft:#FDF0E3;--gr:linear-gradient(135deg,#F0993C,#EE6A55)}
-body[data-tab="c"]{--indigo:#0E9E9A;--indigo-soft:#E2F5F4;--gr:linear-gradient(135deg,#1CB9B1,#3C8DE2)}
-body[data-tab="r"]{--indigo:#E04F86;--indigo-soft:#FDEAF1;--gr:linear-gradient(135deg,#F2609A,#F0855E)}
+body[data-tab="g"]{--indigo:#7489C9;--indigo-soft:#EDF0F9;--gr:linear-gradient(135deg,#8DA0D8,#A99BD6)}
+body[data-tab="v"]{--indigo:#5FA78C;--indigo-soft:#ECF4F1;--gr:linear-gradient(135deg,#86C0A7,#8DBFC9)}
+body[data-tab="d"]{--indigo:#9B86C4;--indigo-soft:#F2EFF8;--gr:linear-gradient(135deg,#AE9BD4,#C79BCB)}
+body[data-tab="k"]{--indigo:#C0905F;--indigo-soft:#F8F1E8;--gr:linear-gradient(135deg,#D7AC7E,#D79A8A)}
+body[data-tab="c"]{--indigo:#5CA6A3;--indigo-soft:#EBF4F3;--gr:linear-gradient(135deg,#86C2BF,#90B4D4)}
+body[data-tab="r"]{--indigo:#C7849C;--indigo-soft:#F8EFF3;--gr:linear-gradient(135deg,#D9A0B3,#D9A99B)}
+body[data-tab="x"]{--indigo:#8B82C9;--indigo-soft:#F0EEF8;--gr:linear-gradient(135deg,#A79CD6,#95A9D6)}
 @media (prefers-color-scheme: dark){
-  body[data-tab="g"]{--indigo:#93A6F5;--indigo-soft:#252A44}
-  body[data-tab="v"]{--indigo:#63D3AC;--indigo-soft:#1D3830}
-  body[data-tab="d"]{--indigo:#BC90F0;--indigo-soft:#2E2444}
-  body[data-tab="k"]{--indigo:#F0AE6E;--indigo-soft:#3A2B1E}
-  body[data-tab="c"]{--indigo:#5CD2CB;--indigo-soft:#1C3838}
-  body[data-tab="r"]{--indigo:#F78BB2;--indigo-soft:#3B2330}
+  body[data-tab="g"]{--indigo:#A3B3E0;--indigo-soft:#272B3B}
+  body[data-tab="v"]{--indigo:#8FC7B4;--indigo-soft:#22322C}
+  body[data-tab="d"]{--indigo:#BCADDE;--indigo-soft:#2E2839}
+  body[data-tab="k"]{--indigo:#DBB58E;--indigo-soft:#352C23}
+  body[data-tab="c"]{--indigo:#8FC6C3;--indigo-soft:#223231}
+  body[data-tab="r"]{--indigo:#DBA9BB;--indigo-soft:#352830}
+  body[data-tab="x"]{--indigo:#B0A7DE;--indigo-soft:#2A2839}
 }
-nav button[data-tab="g"]{--c:#5470E8;--g:linear-gradient(135deg,#5470E8,#8A5CF0)}
-nav button[data-tab="v"]{--c:#25BC8C;--g:linear-gradient(135deg,#25BC8C,#2E9FD4)}
-nav button[data-tab="d"]{--c:#9256E8;--g:linear-gradient(135deg,#9256E8,#CC5AD0)}
-nav button[data-tab="k"]{--c:#EE8A45;--g:linear-gradient(135deg,#F0993C,#EE6A55)}
-nav button[data-tab="c"]{--c:#1CB9B1;--g:linear-gradient(135deg,#1CB9B1,#3C8DE2)}
-nav button[data-tab="r"]{--c:#F2609A;--g:linear-gradient(135deg,#F2609A,#F0855E)}
+nav button[data-tab="g"]{--c:#8095D0;--g:linear-gradient(135deg,#8DA0D8,#A99BD6)}
+nav button[data-tab="v"]{--c:#72B39A;--g:linear-gradient(135deg,#86C0A7,#8DBFC9)}
+nav button[data-tab="d"]{--c:#A693CC;--g:linear-gradient(135deg,#AE9BD4,#C79BCB)}
+nav button[data-tab="k"]{--c:#C99C70;--g:linear-gradient(135deg,#D7AC7E,#D79A8A)}
+nav button[data-tab="c"]{--c:#6FB2AF;--g:linear-gradient(135deg,#86C2BF,#90B4D4)}
+nav button[data-tab="r"]{--c:#CE93A8;--g:linear-gradient(135deg,#D9A0B3,#D9A99B)}
+nav button[data-tab="x"]{--c:#998FCE;--g:linear-gradient(135deg,#A79CD6,#95A9D6)}
 nav button .ic{color:var(--c);opacity:.45;transition:opacity .15s}
 nav button[aria-selected="true"]{color:var(--c);font-weight:700}
 nav button[aria-selected="true"] .ic{opacity:1}
 
-.vcat[data-c="time"]{--vc:#D0904A}.vcat[data-c="work"]{--vc:#4E87AE}
-.vcat[data-c="study"]{--vc:#5C9E7A}.vcat[data-c="move"]{--vc:#3F9D9A}
-.vcat[data-c="money"]{--vc:#BF9A2E}.vcat[data-c="people"]{--vc:#8A7BC0}
-.vcat[data-c="heart"]{--vc:#C97392}.vcat[data-c="nature"]{--vc:#5FA050}
-.vcat[data-c="world"]{--vc:#5786C4}.vcat[data-c="tech"]{--vc:#7C8894}
-.vcat[data-c="adv"]{--vc:#D4833C}.vcat[data-c="syn"]{--vc:#9179C0}
-.vcat[data-c="verb"]{--vc:#C4564B}
+.vcat[data-c="time"]{--vc:#C9A077}.vcat[data-c="work"]{--vc:#8299C4}
+.vcat[data-c="study"]{--vc:#7FB096}.vcat[data-c="move"]{--vc:#79B2AF}
+.vcat[data-c="money"]{--vc:#C2AE7A}.vcat[data-c="people"]{--vc:#A396CC}
+.vcat[data-c="heart"]{--vc:#CC95A8}.vcat[data-c="nature"]{--vc:#8DB387}
+.vcat[data-c="world"]{--vc:#8BA3CC}.vcat[data-c="tech"]{--vc:#9BA3AD}
+.vcat[data-c="adv"]{--vc:#CC9B72}.vcat[data-c="syn"]{--vc:#A693CC}
+.vcat[data-c="verb"]{--vc:#C98D87}
 .vcat .ic{color:var(--vc)}
+
+/* ── 그림 애니메이션 ── */
+.pic{overflow:visible}
+.pic *{transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pk-sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+@keyframes pk-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-1.3px)}}
+@keyframes pk-spin{to{transform:rotate(360deg)}}
+@keyframes pk-drop{0%{transform:translateY(-3px);opacity:0}30%{opacity:1}100%{transform:translateY(4px);opacity:0}}
+@keyframes pk-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.13)}}
+@keyframes pk-wave{0%,100%{transform:translateX(-1.4px)}50%{transform:translateX(1.4px)}}
+@keyframes pk-flap{0%,100%{transform:rotate(0)}50%{transform:rotate(-20deg)}}
+@keyframes pk-float{0%{transform:translateY(2px) scale(.7);opacity:0}35%{opacity:1}100%{transform:translateY(-5px) scale(1);opacity:0}}
+@keyframes pk-swing{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(12deg)}}
+@keyframes pk-twitch{0%,80%,100%{transform:rotate(0)}88%{transform:rotate(-13deg)}}
+@keyframes pk-look{0%,100%{transform:translateX(-1.6px)}50%{transform:translateX(1.6px)}}
+@keyframes pk-swim{0%,100%{transform:translateX(0) rotate(-2deg)}50%{transform:translateX(1.4px) rotate(2deg)}}
+@keyframes pk-tail{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(12deg)}}
+@keyframes pk-tilt{0%,70%,100%{transform:rotate(0)}85%{transform:rotate(-16deg)}}
+@keyframes pk-wob{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(7deg)}}
+@keyframes pk-write{0%,100%{transform:translate(0,0)}50%{transform:translate(2.6px,.5px)}}
+@keyframes pk-speed{0%{transform:translateX(2px);opacity:0}40%{opacity:.9}100%{transform:translateX(-3px);opacity:0}}
+@keyframes pk-leg{0%,100%{transform:rotate(-9deg)}50%{transform:rotate(9deg)}}
+@keyframes pk-hand{to{transform:rotate(360deg)}}
+@keyframes pk-grow{0%{transform:translateY(1px) scale(.6);opacity:0}40%{opacity:.85}100%{transform:translateY(-4px) scale(1.1);opacity:0}}
+
+.p-bob{animation:pk-bob 2.4s ease-in-out infinite}
+.p-bob2{animation:pk-bob 2.4s ease-in-out .5s infinite}
+.p-sway{animation:pk-sway 3.2s ease-in-out infinite;transform-origin:50% 100%}
+.p-wave{animation:pk-wave 2.8s ease-in-out infinite}
+.p-spin{animation:pk-spin 9s linear infinite}
+.p-glow{animation:pk-pulse 3s ease-in-out infinite}
+.p-twink{animation:pk-pulse 1.9s ease-in-out infinite}
+.p-tw{animation:pk-twitch 3.4s ease-in-out infinite;transform-origin:50% 100%}
+.p-tw2{animation:pk-twitch 3.4s ease-in-out .35s infinite;transform-origin:50% 100%}
+.p-ear{animation:pk-swing 2.6s ease-in-out infinite;transform-origin:70% 0}
+.p-ear2{animation:pk-swing 2.6s ease-in-out .4s infinite;transform-origin:30% 0}
+.p-swim{animation:pk-swim 2.2s ease-in-out infinite}
+.p-tail{animation:pk-tail 1.1s ease-in-out infinite;transform-origin:0% 50%}
+.p-flap{animation:pk-flap 1s ease-in-out infinite;transform-origin:20% 20%}
+.p-d1{animation:pk-drop 1.1s linear infinite}
+.p-d2{animation:pk-drop 1.1s linear .35s infinite}
+.p-d3{animation:pk-drop 1.1s linear .7s infinite}
+.p-roll{animation:pk-spin 1.6s linear infinite}
+.p-roll2{animation:pk-spin 1.6s linear infinite}
+.p-smoke{animation:pk-float 2.6s ease-out infinite}
+.p-page{animation:pk-wob 4s ease-in-out infinite;transform-origin:50% 100%}
+.p-swing2{animation:pk-swing 3s ease-in-out infinite;transform-origin:50% 90%}
+.p-turn{animation:pk-tilt 3.4s ease-in-out infinite;transform-origin:33% 38%}
+.p-hand{animation:pk-hand 4s linear infinite;transform-origin:50% 100%}
+.p-hand2{animation:pk-hand 12s linear infinite;transform-origin:0% 0%}
+.p-wob{animation:pk-wob 2.4s ease-in-out infinite;transform-origin:50% 100%}
+.p-tilt{animation:pk-tilt 3.2s ease-in-out infinite;transform-origin:20% 100%}
+.p-float{animation:pk-grow 2.4s ease-out infinite}
+.p-z1{animation:pk-float 2.6s ease-out infinite}
+.p-z2{animation:pk-float 2.6s ease-out .6s infinite}
+.p-speed{animation:pk-speed .8s linear infinite}
+.p-write{animation:pk-write 1.6s ease-in-out infinite}
+.p-look{animation:pk-look 3s ease-in-out infinite}
+.p-s1{animation:pk-pulse 1.4s ease-out infinite;transform-origin:100% 50%}
+.p-s2{animation:pk-pulse 1.4s ease-out .25s infinite;transform-origin:100% 50%}
+.p-t1{animation:pk-pulse 1.3s ease-in-out infinite}
+.p-t2{animation:pk-pulse 1.3s ease-in-out .18s infinite}
+.p-t3{animation:pk-pulse 1.3s ease-in-out .36s infinite}
+.p-cart{animation:pk-wave 1.8s ease-in-out infinite}
+.p-laugh{animation:pk-bob 1.1s ease-in-out infinite}
+.p-tear{animation:pk-drop 2s ease-in infinite}
+.p-arm{animation:pk-leg 1.4s ease-in-out infinite;transform-origin:100% 0}
+.p-arm2{animation:pk-leg 1.4s ease-in-out .7s infinite;transform-origin:0 0}
+.p-leg{animation:pk-leg 1.4s ease-in-out .7s infinite;transform-origin:100% 0}
+.p-leg2{animation:pk-leg 1.4s ease-in-out infinite;transform-origin:0 0}
+.p-ra{animation:pk-leg .6s ease-in-out infinite;transform-origin:100% 0}
+.p-ra2{animation:pk-leg .6s ease-in-out .3s infinite;transform-origin:0 0}
+@media (prefers-reduced-motion: reduce){ .pic *{animation:none!important} }
+
+/* ── 게임 공통 ── */
+.gmenu{display:grid;gap:12px}
+.gcard{background:var(--card);border-radius:var(--radius);padding:20px 19px;box-shadow:var(--sh);
+  display:flex;align-items:center;gap:15px;text-align:left;width:100%}
+.gcard .gicon{width:54px;height:54px;border-radius:18px;background:var(--gr);color:#fff;
+  display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.gcard .gicon .ic{width:26px;height:26px}
+.gcard h3{margin:0 0 3px;font-size:16px;font-weight:700}
+.gcard p{margin:0;font-size:12.5px;color:var(--muted);line-height:1.6}
+.gcard .rec{font-size:11px;color:var(--indigo);font-weight:700;margin-top:5px}
+
+.gtop{display:flex;align-items:center;gap:7px;margin-bottom:11px;flex-wrap:wrap}
+.gstat{background:var(--card);border-radius:999px;padding:7px 13px;font-size:12px;font-weight:600;
+  box-shadow:var(--sh);display:inline-flex;align-items:center;gap:5px;font-variant-numeric:tabular-nums}
+.gstat .ic{width:13px;height:13px;color:var(--indigo)}
+.gquit{margin-left:auto;font-size:12px;color:var(--muted);padding:7px 13px;border-radius:999px;background:var(--card);box-shadow:var(--sh)}
+.heart{color:var(--vermilion)}
+
+/* ── 낙하 게임 ── */
+.field{position:relative;height:272px;border-radius:var(--radius);background:var(--card);
+  box-shadow:var(--sh);overflow:hidden}
+.field::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--line)}
+.drop{position:absolute;transform:translateX(-50%);font-family:var(--jp);font-size:30px;font-weight:700;
+  color:var(--muted);padding:7px 13px;border-radius:14px;background:var(--paper);white-space:nowrap;
+  transition:color .15s,background .15s}
+.drop.tg{color:#fff;background:var(--gr);box-shadow:var(--sh2)}
+.drop ruby rt{font-size:.36em;font-weight:400;opacity:.75}
+.drop.pd{padding:9px 12px;color:var(--indigo)}
+.drop.pd.tg{color:#fff}
+.drop.boom{animation:boom .34s ease-out forwards;pointer-events:none}
+.drop.crash{animation:crash .34s ease-in forwards;pointer-events:none}
+@keyframes boom{0%{transform:translateX(-50%) scale(1);opacity:1}
+  100%{transform:translateX(-50%) scale(1.75);opacity:0}}
+@keyframes crash{0%{transform:translateX(-50%) scale(1);opacity:1}
+  100%{transform:translateX(-50%) scale(.6) translateY(14px);opacity:0}}
+.gopts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:11px}
+.gopt{padding:14px 10px;border-radius:16px;background:var(--card);box-shadow:var(--sh);
+  font-size:15.5px;font-weight:600;font-family:var(--jp);line-height:1.75;min-height:56px}
+.gopt ruby rt{font-size:.4em;font-weight:400;color:var(--muted)}
+.gopt.ng{animation:nope .3s ease}
+@keyframes nope{0%,100%{transform:translateX(0)}30%{transform:translateX(-6px)}70%{transform:translateX(6px)}}
+.flash{position:absolute;inset:0;background:var(--vermilion);opacity:0;pointer-events:none}
+.flash.on{animation:fl .4s ease-out}
+@keyframes fl{0%{opacity:.22}100%{opacity:0}}
+
+/* ── 짝 맞추기 ── */
+.board{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.mc{position:relative;display:block;padding:0;aspect-ratio:1/1;perspective:700px;background:none}
+.mi{position:absolute;inset:0;transition:transform .45s cubic-bezier(.3,1.3,.5,1);
+  transform-style:preserve-3d}
+.mc.up .mi{transform:rotateY(180deg)}
+.mf{position:absolute;inset:0;border-radius:15px;display:flex;align-items:center;justify-content:center;
+  padding:7px;text-align:center;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  box-shadow:var(--sh);line-height:1.35}
+.mb{background:var(--gr);color:#fff}
+.mb .ic{width:22px;height:22px;opacity:.8}
+.mt{background:var(--card);transform:rotateY(180deg);font-weight:700;font-size:15px;word-break:keep-all;line-height:1.45}
+.mt.jp{font-family:var(--jp);font-size:19px;color:var(--indigo);line-height:1.9}
+.mt.jp ruby rt{font-size:.4em;color:var(--muted);font-weight:400}
+body.nofuri .mt.jp ruby rt{opacity:0}
+.mt.pf{color:var(--indigo)}
+.mc.hit .mi{animation:hit .45s ease}
+.mc.hit .mt,.mc.gone .mt{background:var(--indigo-soft);color:var(--indigo)}
+@keyframes hit{0%,100%{transform:rotateY(180deg) scale(1)}45%{transform:rotateY(180deg) scale(1.11)}}
+.mc.gone{opacity:.62}
+.mc.gone .mt{box-shadow:inset 0 0 0 1.5px var(--indigo)}
+.gdone{text-align:center;padding:26px 18px;background:var(--card);border-radius:var(--radius);box-shadow:var(--sh)}
+.gdone .big{font-size:27px;font-weight:700;color:var(--indigo);margin:9px 0 5px;font-variant-numeric:tabular-nums}
+.gdone .sm{font-size:13px;color:var(--muted);line-height:1.7}
+.gagain{margin-top:17px;width:100%;padding:14px;border-radius:16px;background:var(--gr);color:#fff;font-size:14.5px;font-weight:700}
+@media (prefers-reduced-motion: reduce){
+  .drop.boom,.drop.crash,.gopt.ng,.mc.hit .mi,.flash.on{animation:none}
+  .mi{transition:none}
+}
+
+/* ── 보물상자 ── */
+.chest{position:relative;display:flex;flex-direction:column;align-items:center;gap:10px;
+  padding:22px 18px 20px;margin-bottom:13px;border-radius:var(--radius);
+  background:var(--card);box-shadow:var(--sh);overflow:hidden}
+.chest .cbox{width:92px;height:92px;position:relative;z-index:1;color:var(--indigo)}
+.chest .lid{transform-origin:50% 76%;transition:transform .45s cubic-bezier(.2,1.6,.4,1)}
+.chest .ctxt{font-size:13px;color:var(--muted);text-align:center;line-height:1.6;z-index:1}
+.chest .ctxt b{color:var(--indigo)}
+.chest .act{z-index:1;margin-top:2px}
+.chest .gset{width:100%;z-index:1}
+.chest.ready{cursor:pointer}
+.chest.ready .cbox{animation:wob 1.7s ease-in-out infinite}
+.chest.ready::before{content:"";position:absolute;inset:0;border-radius:var(--radius);
+  background:radial-gradient(circle at 50% 42%,var(--indigo-soft) 0%,transparent 62%);opacity:.9}
+.chest.shaking .cbox{animation:shk .42s ease-in-out 3}
+.chest.opened .lid{transform:rotate(-108deg) translateY(-2px)}
+.chest.opened::after{content:"";position:absolute;left:50%;top:44%;width:16px;height:16px;margin:-8px;
+  border-radius:50%;background:var(--indigo);animation:flash .7s ease-out forwards}
+@keyframes wob{0%,88%,100%{transform:rotate(0)}91%{transform:rotate(-7deg)}95%{transform:rotate(7deg)}}
+@keyframes shk{0%,100%{transform:translateX(0) rotate(0)}
+  25%{transform:translateX(-5px) rotate(-5deg)}75%{transform:translateX(5px) rotate(5deg)}}
+@keyframes flash{0%{transform:scale(1);opacity:.85}100%{transform:scale(26);opacity:0}}
+
+/* 보상 모달 */
+.sheet{position:fixed;inset:0;z-index:40;display:flex;align-items:center;justify-content:center;
+  padding:24px;background:rgba(48,44,66,.42);backdrop-filter:blur(3px)}
+.sheet[hidden]{display:none}
+.prize{background:var(--card);border-radius:26px;padding:26px 22px 20px;width:100%;max-width:330px;
+  text-align:center;box-shadow:0 14px 40px rgba(60,54,90,.22);animation:pop .5s cubic-bezier(.2,1.5,.4,1)}
+@keyframes pop{0%{transform:scale(.5) translateY(26px);opacity:0}100%{transform:scale(1);opacity:1}}
+.ptag{display:inline-block;font-size:11px;font-weight:700;color:#fff;border-radius:999px;padding:4px 12px}
+.pjp{font-family:var(--jp);font-size:21px;font-weight:700;line-height:1.75;margin:14px 0 8px}
+.pjp ruby rt{font-size:.42em;color:var(--muted)}
+.pkr{font-size:13px;color:var(--muted)}
+.pmean{font-size:14px;margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.6}
+.pclose{margin-top:18px;width:100%;padding:13px;border-radius:16px;background:var(--gr);
+  color:#fff;font-size:14px;font-weight:700}
+.dup{font-size:11.5px;color:var(--muted);margin-top:9px}
+
+/* 색종이 */
+.conf{position:fixed;inset:0;z-index:41;pointer-events:none;overflow:hidden}
+.conf i{position:absolute;top:-14px;width:8px;height:12px;border-radius:2px;animation:fall linear forwards}
+@keyframes fall{0%{transform:translateY(0) rotate(0);opacity:1}
+  100%{transform:translateY(104vh) rotate(680deg);opacity:.15}}
+
+/* 수집함 */
+.gset{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:8px;margin-top:14px}
+.gcell{aspect-ratio:1;border-radius:14px;background:var(--paper);display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:3px;padding:7px;text-align:center}
+.gcell.has{background:var(--indigo-soft)}
+.gcell .gj{font-family:var(--jp);font-size:15px;font-weight:700;color:var(--indigo);line-height:1.3}
+.gcell .gk{font-size:9.5px;color:var(--muted);line-height:1.3}
+.gcell .lock{font-size:19px;color:var(--muted);opacity:.35}
+
+@media (prefers-reduced-motion: reduce){
+  .chest.ready .cbox,.chest.shaking .cbox{animation:none}
+  .prize,.conf i,.chest.opened::after{animation:none}
+}
 
 /* ── 게임 ── */
 .gbar{display:flex;align-items:center;gap:7px;margin-top:10px;flex-wrap:wrap}
@@ -211,7 +421,7 @@ nav button[aria-selected="true"] .ic{opacity:1}
 .gbtn{color:#fff;background:rgba(255,255,255,.3)}
 .gain{display:inline-flex;align-items:center;gap:5px;font-weight:700;color:var(--indigo);
   font-size:12.5px;margin-left:auto;white-space:nowrap}
-.lvup{background:rgba(255,255,255,.95);color:#D4760E}
+.lvup{background:rgba(255,255,255,.95);color:#C0905F}
 
 /* ── 히어로 배너 ── */
 .wrap{max-width:620px;margin:0 auto;padding:0 16px}
@@ -225,9 +435,15 @@ nav button[aria-selected="true"] .ic{opacity:1}
 .hsub{font-size:11.5px;opacity:.9;font-variant-numeric:tabular-nums;margin-bottom:9px}
 .htrack{height:6px;background:rgba(255,255,255,.28);border-radius:999px;overflow:hidden}
 .hfill{display:block;height:100%;background:#fff;width:0;border-radius:999px;transition:width .35s ease}
+.hero.sm{padding:13px 18px;margin-bottom:12px}
+.hero.sm .htitle{font-size:18px;margin:1px 0 0}
+.hero.sm .hkick{font-size:11px}
 .hero .mochi{color:#fff;position:relative;z-index:1;flex:0 0 auto}
 .hero .mochi .cheek{color:#fff;opacity:.55}
 .chip.now{color:var(--indigo)}
+.lvc{display:inline-flex;flex-direction:column;align-items:center;gap:1px;padding:7px 15px;line-height:1.25}
+.lvc b{font-size:12.5px;font-weight:700}
+.lvc i{font-style:normal;font-size:9.5px;opacity:.72}
 .chip.now[aria-pressed="true"]{color:#fff}
 
 #pager{position:fixed;left:0;right:0;z-index:19;display:flex;align-items:center;justify-content:center;
@@ -274,12 +490,12 @@ nav .ic{width:20px;height:20px;display:block}
 /* ── 하단 탭 ── */
 nav{
   position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;
-  background:var(--card); box-shadow:0 -2px 20px rgba(60,50,120,.09);
+  background:var(--card); box-shadow:0 -2px 18px rgba(80,72,120,.07);
   padding-bottom:env(safe-area-inset-bottom);
 }
-nav button{flex:1;padding:9px 0 8px;font-size:10.5px;color:var(--muted);letter-spacing:-.02em;
+nav button{flex:1;padding:9px 0 8px;font-size:10px;color:var(--muted);letter-spacing:-.02em;
   display:flex;flex-direction:column;align-items:center;gap:2px}
-.nb{width:40px;height:40px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+.nb{width:38px;height:38px;border-radius:14px;display:flex;align-items:center;justify-content:center;
   transition:background .2s ease}
 nav button[aria-selected="true"] .nb{background:var(--g)}
 nav button[aria-selected="true"] .nb .ic{color:#fff;opacity:1}
@@ -307,6 +523,8 @@ nav button[aria-selected="true"]{color:var(--indigo);border-top-color:var(--indi
   <main id="list"></main>
 </div>
 
+<div class="sheet" id="sheet" hidden></div>
+
 <div id="pager" hidden>
   <button id="prev" aria-label="이전">‹</button>
   <span class="pt" id="pageTxt"></span>
@@ -320,6 +538,7 @@ nav button[aria-selected="true"]{color:var(--indigo);border-top-color:var(--indi
   <button data-tab="k" aria-selected="false" data-ic="kanji">한자</button>
   <button data-tab="c" aria-selected="false" data-ic="conj">활용</button>
   <button data-tab="r" aria-selected="false" data-ic="read">독해</button>
+  <button data-tab="x" aria-selected="false" data-ic="game">게임</button>
 </nav>
 
 <script>
@@ -1043,6 +1262,31 @@ const QUIZ=(function(){
     return Object.assign(x,{o,a,w:1}); });
 })();
 
+/* ─────────── 보물상자 보상: 일본어 관용구 ─────────── */
+const GIFT=[
+{j:'猫{ねこ}の 手{て}も 借{か}りたい',k:'고양이 손이라도 빌리고 싶다',m:'너무 바빠서 일손이 아쉽다',r:1},
+{j:'顔{かお}が 広{ひろ}い',k:'얼굴이 넓다',m:'발이 넓다, 아는 사람이 많다',r:1},
+{j:'口{くち}が 軽{かる}い',k:'입이 가볍다',m:'비밀을 잘 못 지킨다',r:1},
+{j:'手{て}を 貸{か}す',k:'손을 빌려주다',m:'도와주다',r:1},
+{j:'耳{みみ}が 痛{いた}い',k:'귀가 아프다',m:'남의 말이 정곡을 찔러 뼈아프다',r:1},
+{j:'気{き}が 合{あ}う',k:'마음이 맞다',m:'성격이 잘 맞는다',r:1},
+{j:'目{め}が 高{たか}い',k:'눈이 높다',m:'보는 안목이 뛰어나다',r:1},
+{j:'足{あし}を 運{はこ}ぶ',k:'발을 옮기다',m:'일부러 찾아가다',r:1},
+{j:'頭{あたま}が 下{さ}がる',k:'머리가 내려간다',m:'절로 존경심이 든다',r:2},
+{j:'腹{はら}を 割{わ}る',k:'배를 가르다',m:'속마음을 털어놓다',r:2},
+{j:'骨{ほね}が 折{お}れる',k:'뼈가 부러진다',m:'몹시 힘이 든다',r:2},
+{j:'水{みず}に 流{なが}す',k:'물에 흘려보내다',m:'지난 일을 없던 걸로 하다',r:2},
+{j:'襟{えり}を 正{ただ}す',k:'옷깃을 여미다',m:'자세를 가다듬다',r:2},
+{j:'音{おと}を 上{あ}げる',k:'소리를 지르다',m:'힘들어서 두 손 들다',r:2},
+{j:'釘{くぎ}を 刺{さ}す',k:'못을 박다',m:'미리 단단히 일러두다',r:2},
+{j:'大目{おおめ}に 見{み}る',k:'크게 보다',m:'너그럽게 봐주다',r:2},
+{j:'石{いし}の 上{うえ}にも 三年{さんねん}',k:'돌 위에서도 삼 년',m:'참고 견디면 결국 이룬다',r:3},
+{j:'七転{ななころ}び 八起{やお}き',k:'일곱 번 넘어져 여덟 번 일어난다',m:'몇 번 실패해도 다시 일어선다',r:3},
+{j:'継続{けいぞく}は 力{ちから}なり',k:'계속하는 것이 힘이다',m:'꾸준함이 결국 실력이 된다',r:3},
+{j:'急{いそ}がば 回{まわ}れ',k:'급하면 돌아가라',m:'서두를수록 정석대로',r:3}
+];
+const RARE={1:['흔함','#8FB4D4'],2:['귀함','#A99BD4'],3:['전설','#D4AE7C']};
+
 const HIT=['정답입니다.','잘 잡으셨어요.','바로 그거예요.','깔끔합니다.'];
 const MISS=['아쉽네요. 아래 규칙을 한 번 보세요.','★약함에 담아뒀어요. 나중에 다시 만납니다.','괜찮아요. 여기서 많이들 걸립니다.','한 번 더 보면 잡힙니다.'];
 
@@ -1094,6 +1338,9 @@ const IC={
  verb:'<path d="M11.4 2.6L5 11h4l-1 6.4L15 9h-4z"/>',
  list:'<path d="M4 5.5h12"/><path d="M4 10h12"/><path d="M4 14.5h12"/>',
  card:'<rect x="5" y="4" width="10" height="12" rx="2"/><path d="M2.6 7v6"/><path d="M17.4 7v6"/>',
+ game:'<rect x="2.6" y="5.6" width="14.8" height="8.8" rx="4.4"/><path d="M6 8.6v2.8M4.6 10h2.8"/><circle cx="13.2" cy="9.4" r=".9" fill="currentColor" stroke="none"/><circle cx="15" cy="11.4" r=".9" fill="currentColor" stroke="none"/>',
+ drop:'<path d="M10 2.8s5 5.6 5 9a5 5 0 01-10 0c0-3.4 5-9 5-9z"/>',
+ cards:'<rect x="7" y="3.4" width="9.4" height="13.2" rx="2"/><path d="M4.6 5.6v10a1.8 1.8 0 001.8 1.8h6.8"/>',
  shuffle:'<path d="M3 5.5h3.2c1.5 0 2.4 1 3.3 2.3l2 3c.9 1.3 1.8 2.3 3.3 2.3H17"/><path d="M3 14.5h3.2c1.5 0 2.4-1 3.3-2.3"/><path d="M13.4 11.6L17 14.5l-3.6 2.6"/><path d="M13.4 2.9L17 5.5l-3.6 2.7"/>',
  fire:'<path d="M10 17.4c2.8 0 4.8-1.9 4.8-4.4 0-3.4-3.4-4.6-2.6-8.4-2 .6-4.4 3-4.4 5.4 0 1 .4 1.8 1 2.4-.4-2 .8-3.4 1.8-4-.6 2.8 2 3.4 2 5.2 0 1.4-1 2.4-2.6 2.4s-2.8-1.1-2.8-2.7c0-.6.1-1.1.3-1.6-1 .9-1.5 2.1-1.5 3.3 0 1.4 1.2 2.4 4 2.4z"/>',
  sound:'<path d="M4 7.6h2.8L10.4 4v12L6.8 12.4H4z"/><path d="M13.2 7.6a3.4 3.4 0 010 4.8"/><path d="M15.4 5.2a6.8 6.8 0 010 9.6"/>'
@@ -1152,6 +1399,401 @@ const VCAT={
  v51:['heart','감정'],v52:['syn','유의표현'],v53:['work','직장'],v54:['verb','동사'],v55:['syn','유의표현'],
  v56:['world','사회'],v57:['adv','부사'],v58:['syn','유의표현'],v59:['verb','동사'],v60:['study','학습']
 };
+
+/* ─────────── 미니 게임 ─────────── */
+let gameOn=null;
+/* ─────────── 그림 단어 ─────────── */
+const PIC=[
+['猫{ねこ}','고양이','<g class="p-bob"><path class="p-tw" d="M6.2 8.4L5.1 3.8l4.1 2.4"/><path class="p-tw2" d="M17.8 8.4L18.9 3.8l-4.1 2.4"/><circle cx="12" cy="13" r="6.2"/><circle cx="9.9" cy="12.2" r=".85" fill="currentColor" stroke="none"/><circle cx="14.1" cy="12.2" r=".85" fill="currentColor" stroke="none"/><path d="M12 14.3l-.9.9M12 14.3l.9.9"/><path d="M4.6 13.4h3M17 13.4h3"/></g>'],
+['犬{いぬ}','개','<g class="p-bob"><path class="p-ear" d="M7.4 7.2C5.8 7.2 5 8.8 5 10.8v2.4"/><path class="p-ear2" d="M16.6 7.2c1.6 0 2.4 1.6 2.4 3.6v2.4"/><path d="M7.2 10.4a4.8 4.8 0 019.6 0v3.4a4.8 4.8 0 01-9.6 0z"/><ellipse cx="12" cy="14.2" rx="1.1" ry=".8" fill="currentColor" stroke="none"/><path d="M10.2 11.8v.5M13.8 11.8v.5"/><path d="M12 15.2v1"/></g>'],
+['魚{さかな}','물고기','<g class="p-swim"><path d="M3.6 12c2.8-3.3 5.7-4.9 8.6-4.9s5.3 1.8 6.5 4.9c-1.2 3.1-3.6 4.9-6.5 4.9S6.4 15.3 3.6 12z"/><path class="p-tail" d="M18.7 12l2.8-3v6z"/><circle cx="8.8" cy="11" r=".8" fill="currentColor" stroke="none"/><path d="M13.4 8.4c-.6 2.4-.6 4.8 0 7.2"/></g>'],
+['鳥{とり}','새','<g class="p-bob"><path d="M6.4 16.6A6.1 6.1 0 013.8 11.6C3.8 8 6.9 5.2 10.6 5.2c2.3 0 4.3 1 5.5 2.7l3.6-.9-1.3 2.9c.5 1 .8 2.1.8 3.3 0 1.2-.3 2.3-.9 3.3z"/><circle cx="13.4" cy="9.2" r=".75" fill="currentColor" stroke="none"/><path d="M16.9 10.2l3.4.4-2.8 1.6"/><path class="p-flap" d="M7.8 11.4c2.1.2 3.6 1.7 4 3.6-1.8.4-3.6-.3-4.5-1.8"/><path d="M8.8 16.8v2.4M12.6 16.8v2.4"/></g>'],
+['木{き}','나무','<g class="p-sway"><path d="M12 20.6v-4.8"/><path d="M8.6 15.8a4.7 4.7 0 01-2.1-8.9A5.2 5.2 0 0112 3.6a5.2 5.2 0 015.5 3.3 4.7 4.7 0 01-2.1 8.9z"/><path d="M12 15.8v-4.4l-2-1.8M12 13.2l2-1.8"/></g>'],
+['花{はな}','꽃','<g class="p-sway"><circle cx="12" cy="6.4" r="2.3"/><circle cx="7.5" cy="9.7" r="2.3"/><circle cx="16.5" cy="9.7" r="2.3"/><circle cx="9.2" cy="14.6" r="2.3"/><circle cx="14.8" cy="14.6" r="2.3"/><circle cx="12" cy="10.7" r="1.6"/><path d="M12 16.6v4.2"/><path d="M12 18.8c1.7 0 2.8-1 3-2.3-1.5-.2-2.8.6-3 2.3z"/></g>'],
+['山{やま}','산','<path d="M2.4 18.8L8.8 7.2l3.6 6L15 9l6.6 9.8z"/><path d="M6.6 11.6l2.2-1.5 1.7 2.5"/><path d="M13.6 11.8L15 9l1.6 2.4"/>'],
+['水{みず}','물','<g class="p-wave"><path d="M3 8.4c2-1.7 4-1.7 6 0s4 1.7 6 0 4-1.7 6 0"/><path d="M3 12.8c2-1.7 4-1.7 6 0s4 1.7 6 0 4-1.7 6 0"/><path d="M3 17.2c2-1.7 4-1.7 6 0s4 1.7 6 0 4-1.7 6 0"/></g>'],
+['雨{あめ}','비','<path d="M6.6 13.4a4.4 4.4 0 01.6-8.8 5.6 5.6 0 0110.6 1.6 3.8 3.8 0 01-.6 7.2"/><path class="p-d1" d="M8.4 16.4l-1 2.8"/><path class="p-d2" d="M12 16.4l-1 2.8"/><path class="p-d3" d="M15.6 16.4l-1 2.8"/>'],
+['雪{ゆき}','눈','<g class="p-spin"><path d="M12 3.6v16.8M4.8 7.8l14.4 8.4M19.2 7.8L4.8 16.2"/><path d="M12 6.8l-1.7-1.8M12 6.8l1.7-1.8M12 17.2l-1.7 1.8M12 17.2l1.7 1.8"/><path d="M7.3 9.6l-2.4.2M16.7 14.4l2.4-.2M7.3 14.4l-2.4-.2M16.7 9.6l2.4.2"/></g>'],
+['月{つき}','달','<g class="p-glow"><path d="M19.6 14.8A8.4 8.4 0 019.2 4.4a8.4 8.4 0 1010.4 10.4z"/></g>'],
+['星{ほし}','별','<g class="p-twink"><path d="M12 3.4l2.7 5.6 6 .9-4.4 4.2 1.1 6.1L12 17.3l-5.4 2.9 1.1-6.1-4.4-4.2 6-.9z"/></g>'],
+['車{くるま}','자동차','<g class="p-bob"><path d="M3.4 15.2v-2.6l2-4.6a2 2 0 011.8-1.2h9.6a2 2 0 011.8 1.2l2 4.6v2.6z"/><path d="M5.8 12.6h12.4"/><path d="M11.8 8v4.6"/></g><circle class="p-roll" cx="7.4" cy="16.8" r="2"/><circle class="p-roll2" cx="16.6" cy="16.8" r="2"/><path class="p-roll" d="M7.4 15.4v2.8M6 16.8h2.8"/><path class="p-roll2" d="M16.6 15.4v2.8M15.2 16.8h2.8"/>'],
+['家{いえ}','집','<path d="M3.6 10.6L12 3.8l8.4 6.8V19a1 1 0 01-1 1H4.6a1 1 0 01-1-1z"/><path d="M9.6 20v-5.6h4.8V20"/><path class="p-smoke" d="M16.6 7.6V4.4h2v4.8"/>'],
+['本{ほん}','책','<g class="p-page"><path d="M12 7.2v12.4"/><path d="M12 7.2C10.4 5.8 7.4 5 4 5v12.2c3.4 0 6.4.8 8 2.4"/><path d="M12 7.2c1.6-1.4 4.6-2.2 8-2.2v12.2c-3.4 0-6.4.8-8 2.4"/></g>'],
+['傘{かさ}','우산','<g class="p-swing2"><path d="M2.8 11.6a9.2 9.2 0 0118.4 0z"/><path d="M2.8 11.6c1.5-1.6 3-1.6 4.6 0 1.5-1.6 3-1.6 4.6 0 1.5-1.6 3-1.6 4.6 0 1.5-1.6 3-1.6 4.6 0"/><path d="M12 11.6v6.2a2.2 2.2 0 01-4.4 0"/><path d="M12 2.4v1.8"/></g>'],
+['靴{くつ}','신발','<g class="p-bob"><path d="M3.4 18.4v-4.2c0-.6.5-1.1 1.1-1.1h2.2l2.4-2.7c.4-.5 1.1-.6 1.6-.2l1.5 1c.4.3.7.8.8 1.3l.3 1.5 5 1.5c1 .3 1.7 1.2 1.7 2.3v.6z"/><path d="M3.4 18.4h17.2"/><path d="M8.2 13.6l1.6 1.4M10.4 11.6l1.5 1.3"/></g>'],
+['帽子{ぼうし}','모자','<g class="p-bob"><path d="M7 11.6V6.8a2 2 0 012-2h6a2 2 0 012 2v4.8"/><path d="M3.4 14.4c0-1.4 3.8-2.6 8.6-2.6s8.6 1.2 8.6 2.6-3.8 2.6-8.6 2.6-8.6-1.2-8.6-2.6z"/><path d="M7 8.6h10"/></g>'],
+['鍵{かぎ}','열쇠','<g class="p-turn"><circle cx="7.8" cy="9" r="3.8"/><circle cx="7.8" cy="9" r="1.2"/><path d="M10.6 11.6L19.2 20.2"/><path d="M16.6 17.6l2-2M14.2 15.2l2-2"/></g>'],
+['時計{とけい}','시계','<circle cx="12" cy="12" r="8.4"/><path d="M12 5.6v1.2M18.4 12h-1.2M12 18.4v-1.2M5.6 12h1.2"/><path class="p-hand" d="M12 12V7.6"/><path class="p-hand2" d="M12 12l3.2 2"/>'],
+['手紙{てがみ}','편지','<g class="p-bob"><rect x="3.2" y="6" width="17.6" height="12.4" rx="1.6"/><path d="M3.9 7.2L12 13l8.1-5.8"/></g>'],
+['卵{たまご}','달걀','<g class="p-wob"><path d="M12 3.6c3.2 0 5.8 4.8 5.8 8.8s-2.6 7.4-5.8 7.4-5.8-3.4-5.8-7.4 2.6-8.8 5.8-8.8z"/><path d="M9.6 11.4c0-1.8.9-3.4 2-4.2"/></g>'],
+['食{た}べる','먹다','<g class="p-bob"><path d="M6.8 3.4v8.2M4.8 3.4v4.2a2 2 0 004 0V3.4"/><path d="M6.8 11.6v9"/></g><g class="p-bob2"><path d="M17 3.4c-1.8 1.2-2.6 3.2-2.6 5.2s.9 3 2.6 3.2v8.8"/></g>'],
+['飲{の}む','마시다','<g class="p-tilt"><path d="M5.4 6.6h11.2v8.8a4 4 0 01-4 4H9.4a4 4 0 01-4-4z"/><path d="M16.6 8.8h2a2.4 2.4 0 010 4.8h-2"/><path d="M5.4 9.6h11.2"/></g><path class="p-float" d="M8.4 4.4c0-1 1-1.2 1-2.2M12 4.4c0-1 1-1.2 1-2.2"/>'],
+['寝{ね}る','자다','<path d="M2.8 19.6v-8.4"/><path d="M2.8 13.8h7.6a2 2 0 012-2h5.6a2 2 0 012 2v5.8"/><path d="M2.8 16.8h17.2"/><circle cx="6.4" cy="10.6" r="1.9"/><path class="p-z1" d="M14.4 7.8h2.8l-2.8 3h2.8"/><path class="p-z2" d="M18.4 3.6h2.4l-2.4 2.6h2.4"/>'],
+['走{はし}る','달리다','<circle cx="16" cy="4.8" r="2.1"/><path d="M15.1 8.1l-3.6 3.7 2.9 2.5"/><path class="p-ra" d="M11.9 11.5L7.8 10.6"/><path class="p-ra2" d="M15.4 9.7l3.8 2.1"/><path d="M14.4 14.3l-.8 5.4"/><path d="M13.3 13.4L8.9 17.6"/><g class="p-speed"><path d="M2.6 7.6h4M1.8 11h3.2"/></g>'],
+['書{か}く','쓰다','<g class="p-write"><path d="M5.6 15.8l.9-3.2L16.2 2.9l2.4 2.4L8.9 14.9z"/><path d="M14.8 4.3l2.4 2.4"/></g><path d="M4 19.4h16"/>'],
+['見{み}る','보다','<path d="M2.4 12s3.6-6.4 9.6-6.4S21.6 12 21.6 12s-3.6 6.4-9.6 6.4S2.4 12 2.4 12z"/><g class="p-look"><circle cx="12" cy="12" r="2.8"/><circle cx="12" cy="12" r=".9" fill="currentColor" stroke="none"/></g>'],
+['聞{き}く','듣다','<path d="M10.4 20.6c-1.3-1.5-1.5-3-1.5-5 0-1.5-1.1-2.5-1.1-4.5a6.6 6.6 0 0113.2 0c0 3.7-2.9 4.9-4.3 6-1 .8-.9 1.8-2 1.8s-1.5-.9-1.5-2.3c0-1.8 2.3-2.4 2.3-4.3a2.4 2.4 0 00-4.8 0"/><path class="p-s1" d="M5.4 9.2a4.6 4.6 0 000 5.6"/><path class="p-s2" d="M2.4 7a8.4 8.4 0 000 10"/>'],
+['話{はな}す','말하다','<path d="M4.4 4.6h15.2a1.8 1.8 0 011.8 1.8v7.4a1.8 1.8 0 01-1.8 1.8H10l-5 4v-4h-.6a1.8 1.8 0 01-1.8-1.8V6.4a1.8 1.8 0 011.8-1.8z"/><circle class="p-t1" cx="8.4" cy="10.2" r="1" fill="currentColor" stroke="none"/><circle class="p-t2" cx="12" cy="10.2" r="1" fill="currentColor" stroke="none"/><circle class="p-t3" cx="15.6" cy="10.2" r="1" fill="currentColor" stroke="none"/>'],
+['買{か}う','사다','<g class="p-cart"><path d="M2.6 4h2.6l2.6 11.4h10.6"/><path d="M7.4 7.4h13.4L19 13.4H8.7"/><circle cx="9.6" cy="19" r="1.5"/><circle cx="17.6" cy="19" r="1.5"/></g>'],
+['笑{わら}う','웃다','<g class="p-laugh"><circle cx="12" cy="12" r="8.4"/><path d="M8.2 10.4c.7-1.3 2.3-1.3 3 0M12.8 10.4c.7-1.3 2.3-1.3 3 0"/><path d="M7.8 13.8c1.2 2 7.2 2 8.4 0"/></g>'],
+['泣{な}く','울다','<circle cx="12" cy="12" r="8.4"/><path d="M8.4 9.8c.8-.8 2-.8 2.8 0M12.8 9.8c.8-.8 2-.8 2.8 0"/><path d="M9.4 16.4c1.5-1.6 3.7-1.6 5.2 0"/><path class="p-tear" d="M8.9 12.2s1.1 1.6 1.1 2.4a1.1 1.1 0 01-2.2 0c0-.8 1.1-2.4 1.1-2.4z" fill="currentColor" stroke="none"/>'],
+['歩{ある}く','걷다','<circle cx="12.4" cy="4.4" r="2.1"/><path d="M12.4 7.4v5.8"/><path class="p-arm" d="M12.4 9L9.2 12.2"/><path class="p-arm2" d="M12.4 9l3.2 3.2"/><path class="p-leg" d="M12.4 13.2L9 19.6"/><path class="p-leg2" d="M12.4 13.2l3.2 6.4"/>']
+];
+function picSvg(d,px){
+  return `<svg class="pic" viewBox="0 0 24 24" style="width:${px}px;height:${px}px" fill="none" stroke="currentColor"
+    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+}
+
+/* ─────────── 단어 묶음 ─────────── */
+const NOUN=[['家族{かぞく}','가족'],['友達{ともだち}','친구'],['学生{がくせい}','학생'],['先生{せんせい}','선생님'],
+['会社{かいしゃ}','회사'],['仕事{しごと}','일'],['時間{じかん}','시간'],['場所{ばしょ}','장소'],
+['部屋{へや}','방'],['台所{だいどころ}','부엌'],['玄関{げんかん}','현관'],['階段{かいだん}','계단'],
+['公園{こうえん}','공원'],['駅{えき}','역'],['道{みち}','길'],['橋{はし}','다리'],
+['信号{しんごう}','신호등'],['切符{きっぷ}','표'],['財布{さいふ}','지갑'],['眼鏡{めがね}','안경'],
+['荷物{にもつ}','짐'],['封筒{ふうとう}','봉투'],['新聞{しんぶん}','신문'],['雑誌{ざっし}','잡지'],
+['辞書{じしょ}','사전'],['教科書{きょうかしょ}','교과서'],['宿題{しゅくだい}','숙제'],['試験{しけん}','시험'],
+['成績{せいせき}','성적'],['質問{しつもん}','질문'],['答{こた}え','답'],['意味{いみ}','의미'],
+['理由{りゆう}','이유'],['方法{ほうほう}','방법'],['約束{やくそく}','약속'],['予定{よてい}','예정'],
+['準備{じゅんび}','준비'],['練習{れんしゅう}','연습'],['経験{けいけん}','경험'],['趣味{しゅみ}','취미'],
+['旅行{りょこう}','여행'],['写真{しゃしん}','사진'],['音楽{おんがく}','음악'],['映画{えいが}','영화'],
+['料理{りょうり}','요리'],['味{あじ}','맛'],['匂{にお}い','냄새'],['声{こえ}','목소리'],
+['顔{かお}','얼굴'],['手{て}','손'],['足{あし}','발'],['頭{あたま}','머리'],
+['心{こころ}','마음'],['体{からだ}','몸'],['力{ちから}','힘'],['元気{げんき}','기운'],
+['天気{てんき}','날씨'],['季節{きせつ}','계절'],['世界{せかい}','세계'],['社会{しゃかい}','사회']];
+
+const VERB=[['会{あ}う','만나다'],['開{あ}ける','열다'],['遊{あそ}ぶ','놀다'],['急{いそ}ぐ','서두르다'],
+['動{うご}く','움직이다'],['選{えら}ぶ','고르다'],['起{お}きる','일어나다'],['送{おく}る','보내다'],
+['覚{おぼ}える','외우다'],['終{お}わる','끝나다'],['変{か}える','바꾸다'],['返{かえ}す','돌려주다'],
+['借{か}りる','빌리다'],['考{かんが}える','생각하다'],['決{き}める','정하다'],['答{こた}える','답하다'],
+['困{こま}る','곤란하다'],['探{さが}す','찾다'],['誘{さそ}う','권하다'],['閉{し}める','닫다'],
+['知{し}る','알다'],['住{す}む','살다'],['捨{す}てる','버리다'],['育{そだ}てる','기르다'],
+['助{たす}ける','돕다'],['建{た}てる','짓다'],['使{つか}う','쓰다'],['疲{つか}れる','지치다'],
+['続{つづ}ける','계속하다'],['作{つく}る','만들다'],['伝{つた}える','전하다'],['届{とど}く','도착하다'],
+['止{と}まる','멈추다'],['直{なお}す','고치다'],['習{なら}う','배우다'],['並{なら}ぶ','줄 서다'],
+['逃{に}げる','도망치다'],['運{はこ}ぶ','나르다'],['始{はじ}める','시작하다'],['働{はたら}く','일하다'],
+['払{はら}う','지불하다'],['増{ふ}える','늘다'],['減{へ}る','줄다'],['曲{ま}がる','돌다'],
+['迷{まよ}う','망설이다'],['見{み}つける','발견하다'],['戻{もど}る','돌아오다'],['休{やす}む','쉬다'],
+['呼{よ}ぶ','부르다'],['渡{わた}る','건너다'],['忘{わす}れる','잊다'],['洗{あら}う','씻다'],
+['招{まね}く','초대하다'],['喜{よろこ}ぶ','기뻐하다'],['驚{おどろ}く','놀라다']];
+
+const ADJ=[['明{あか}るい','밝다'],['暗{くら}い','어둡다'],['暖{あたた}かい','따뜻하다'],['涼{すず}しい','시원하다'],
+['暑{あつ}い','덥다'],['寒{さむ}い','춥다'],['熱{あつ}い','뜨겁다'],['冷{つめ}たい','차갑다'],
+['新{あたら}しい','새롭다'],['古{ふる}い','낡다'],['大{おお}きい','크다'],['小{ちい}さい','작다'],
+['高{たか}い','높다·비싸다'],['安{やす}い','싸다'],['低{ひく}い','낮다'],['長{なが}い','길다'],
+['短{みじか}い','짧다'],['広{ひろ}い','넓다'],['狭{せま}い','좁다'],['重{おも}い','무겁다'],
+['軽{かる}い','가볍다'],['強{つよ}い','강하다'],['弱{よわ}い','약하다'],['速{はや}い','빠르다'],
+['遅{おそ}い','느리다'],['多{おお}い','많다'],['少{すく}ない','적다'],['難{むずか}しい','어렵다'],
+['易{やさ}しい','쉽다'],['忙{いそが}しい','바쁘다'],['楽{たの}しい','즐겁다'],['嬉{うれ}しい','기쁘다'],
+['悲{かな}しい','슬프다'],['寂{さび}しい','외롭다'],['怖{こわ}い','무섭다'],['優{やさ}しい','상냥하다'],
+['厳{きび}しい','엄하다'],['珍{めずら}しい','드물다'],['正{ただ}しい','올바르다'],['細{こま}かい','자잘하다'],
+['深{ふか}い','깊다'],['浅{あさ}い','얕다'],['丸{まる}い','둥글다'],['汚{きたな}い','더럽다'],
+['美{うつく}しい','아름답다']];
+
+/* ─────────── 히라가나 ─────────── */
+const HIRA=[['あ','아'],['い','이'],['う','우'],['え','에'],['お','오'],
+['か','카'],['き','키'],['く','쿠'],['け','케'],['こ','코'],
+['さ','사'],['し','시'],['す','스'],['せ','세'],['そ','소'],
+['た','타'],['ち','치'],['つ','츠'],['て','테'],['と','토'],
+['な','나'],['に','니'],['ぬ','누'],['ね','네'],['の','노'],
+['は','하'],['ひ','히'],['ふ','후'],['へ','헤'],['ほ','호'],
+['ま','마'],['み','미'],['む','무'],['め','메'],['も','모'],
+['や','야'],['ゆ','유'],['よ','요'],
+['ら','라'],['り','리'],['る','루'],['れ','레'],['ろ','로'],
+['わ','와'],['を','오 (조사)'],['ん','ㄴ 받침']];
+
+/* 난이도 단계 */
+function pairs(arr){ const all=arr.map(k=>k[1]); return arr.map(([q,a])=>({q,a,all})); }
+const LEVELS=[
+ {id:'hira', n:'히라가나', s:'입문',   sp:.44, get:()=>pairs(HIRA)},
+ {id:'kata', n:'가타카나', s:'입문',   sp:.47, get:()=>pairs(KANA)},
+ {id:'pic',  n:'그림 단어', s:'N5',    sp:.46, pic:1,
+   get:()=>PIC.map(([w,,d])=>({q:d,a:w,all:PIC.map(k=>k[0]),isPic:1}))},
+ {id:'noun', n:'명사',    s:'N5·N4', sp:.50, get:()=>pairs(NOUN)},
+ {id:'verb', n:'동사',    s:'N4·N3', sp:.52, get:()=>pairs(VERB)},
+ {id:'adj',  n:'형용사',  s:'N4·N3', sp:.52, get:()=>pairs(ADJ)},
+ {id:'word', n:'외래어',  s:'N5',    sp:.50, get:()=>pairs(KWORD)},
+ {id:'kj5',  n:'기초 한자', s:'N5·N4', sp:.54, get:()=>KJ.filter(k=>EASY.has(k[0])).map(([w,r])=>({q:w,a:r,all:KJ.map(k=>k[1])}))},
+ {id:'kj3',  n:'N3 한자', s:'N3',    sp:.58, get:()=>KJ.filter(k=>!EASY.has(k[0])).map(([w,r])=>({q:w,a:r,all:KJ.map(k=>k[1])}))}
+];
+const EASY=new Set(['時間','会社','学校','先生','友達','電車','病院','銀行','映画','音楽','料理',
+'買い物','旅行','仕事','勉強','練習','宿題','教室','家族','子供','名前','電話','時計','天気',
+'食事','約束','運動','野菜','果物','散歩']);
+let glv='hira';
+function LVL(){ return LEVELS.find(l=>l.id===glv)||LEVELS[0]; }
+function poolData(){ return LVL().get(); }
+function poolName(){ return LVL().n; }
+
+/* ── 낙하 ── */
+const RN={raf:0,items:[],sp:.44,score:0,life:3,cleared:0,tick:0,gap:118,dead:false};
+function rnQuiz(){
+  const d=poolData(), it=d[Math.floor(Math.random()*d.length)];
+  const o=shuf([it.a,...pick3(it.all,it.a)]);
+  return {q:it.q,a:it.a,o,isPic:it.isPic};
+}
+function rnOpts(){
+  const box=document.getElementById('gopts'); if(!box) return;
+  const t=RN.items[0];
+  if(!t){ box.innerHTML=''; return; }
+  box.innerHTML=t.q.o.map(o=>`<button class="gopt" data-v="${esc(o)}">${ruby(o)}</button>`).join('');
+}
+function rnSpawn(){
+  const f=document.getElementById('field'); if(!f) return;
+  const q=rnQuiz();
+  const el=document.createElement('div');
+  el.className='drop'+(q.isPic?' pd':'');
+  el.innerHTML = q.isPic ? picSvg(q.q,46) : ruby(q.q);
+  const LANES=[22,50,78];
+  const room=LANES.map((_,i)=>{
+    const ys=RN.items.filter(o=>o.lane===i).map(o=>o.y);
+    return ys.length?Math.min(...ys):1e6;
+  });
+  const top=Math.max(...room);
+  const cand=room.map((v,i)=>v===top?i:-1).filter(i=>i>=0);
+  const best=cand[Math.floor(Math.random()*cand.length)];
+  el.style.left=LANES[best]+'%'; el.style.top='-52px';
+  f.appendChild(el);
+  RN.items.push({el,y:-52,q,lane:best});
+  if(RN.items.length===1) rnOpts();
+  rnMark();
+}
+function rnMark(){ RN.items.forEach((it,i)=>it.el.classList.toggle('tg',i===0)); }
+function rnHud(){
+  const h=document.getElementById('ghud'); if(!h) return;
+  h.innerHTML=`<span class="gstat">${icon('drop')}${RN.score}점</span>
+    <span class="gstat"><span class="heart">${'♥'.repeat(RN.life)||'·'}</span></span>
+    <span class="gstat">Lv ${Math.floor(RN.cleared/5)+1}</span>
+    <span class="gstat">최고 ${st.rainBest||0}</span>
+    <button class="gquit" id="quit">그만</button>`;
+}
+function rnLoop(){
+  if(RN.dead) return;
+  const f=document.getElementById('field');
+  if(!f){ rnStop(); return; }
+  const H=f.clientHeight;
+  RN.tick++;
+  if(RN.tick%Math.max(46,RN.gap)===0) rnSpawn();
+  for(let i=RN.items.length-1;i>=0;i--){
+    const it=RN.items[i];
+    it.y+=RN.sp;
+    it.el.style.top=it.y+'px';
+    if(it.y>H-40){
+      it.el.classList.add('crash'); setTimeout(()=>it.el.remove(),340);
+      RN.items.splice(i,1);
+      rnHurt();
+      if(i===0){ rnMark(); rnOpts(); }
+    }
+  }
+  RN.raf=requestAnimationFrame(rnLoop);
+}
+function rnHurt(){
+  RN.life--; RN.score=Math.max(0,RN.score-5);
+  const fl=document.getElementById('flash');
+  if(fl){ fl.classList.remove('on'); void fl.offsetWidth; fl.classList.add('on'); }
+  rnHud();
+  if(RN.life<=0) rnOver();
+}
+function rnHit(btn){
+  const t=RN.items[0]; if(!t) return;
+  if(btn.dataset.v===t.q.a){
+    RN.score+=10; RN.cleared++;
+    st.pts=(st.pts||0)+5; save();
+    t.el.classList.add('boom'); setTimeout(()=>t.el.remove(),340);
+    RN.items.shift();
+    if(RN.cleared%5===0){ RN.sp=Math.min(1.5,RN.sp+.075); RN.gap=Math.max(58,RN.gap-7); }
+    rnMark(); rnOpts(); rnHud();
+    if(!RN.items.length) rnSpawn();
+  } else {
+    btn.classList.add('ng'); setTimeout(()=>btn.classList.remove('ng'),300);
+    rnHurt();
+  }
+}
+function rnOver(){
+  RN.dead=true; cancelAnimationFrame(RN.raf);
+  const best=RN.score>(st.rainBest||0);
+  if(best){ st.rainBest=RN.score; } save();
+  document.getElementById('list').innerHTML=`<div class="gtop" id="ghud">
+      <button class="gquit" id="quit">목록으로</button></div>
+    <div class="gdone">
+    ${mochi(best?'proud':'sad',60)}
+    <div class="big">${RN.score}점</div>
+    <div class="sm">${poolName()} · ${RN.cleared}개 격추${best?'<br>새 최고 기록입니다':`<br>최고 기록 ${st.rainBest}점`}</div>
+    <button class="gagain" id="again">다시 하기</button></div>`;
+  prog();
+}
+function rnStop(){ RN.dead=true; cancelAnimationFrame(RN.raf); RN.items=[]; }
+function rnStart(){
+  rnStop();
+  Object.assign(RN,{items:[],sp:LVL().sp,score:0,life:3,cleared:0,tick:0,gap:118,dead:false});
+  document.getElementById('list').innerHTML=
+    `<div class="gtop" id="ghud"></div>
+     <div class="field" id="field"><div class="flash" id="flash"></div></div>
+     <div class="gopts" id="gopts"></div>`;
+  rnHud(); rnSpawn();
+  setTimeout(()=>{ if(!RN.dead) rnSpawn(); },900);
+  RN.raf=requestAnimationFrame(rnLoop);
+}
+
+/* ── 짝 맞추기 ── */
+const MT={cards:[],open:[],done:0,tries:0,t0:0,lock:false};
+function mtStart(){
+  const d=poolData().slice();
+  const sel=shuf(d).slice(0,6);
+  const cards=[];
+  sel.forEach((it,i)=>{
+    cards.push({p:i,t:it.q,jp:it.isPic?0:1,pic:it.isPic?1:0});
+    cards.push({p:i,t:it.a,jp:it.isPic?1:0});
+  });
+  Object.assign(MT,{cards:shuf(cards),open:[],done:0,tries:0,t0:Date.now(),lock:false});
+  document.getElementById('list').innerHTML=`<div class="gtop" id="ghud"></div><div class="board" id="board">${
+    MT.cards.map((c,i)=>`<button class="mc" data-i="${i}">
+      <span class="mi"><span class="mf mb">${icon('cards')}</span>
+      <span class="mf mt ${c.jp?'jp':''}${c.pic?' pf':''}">${
+        c.pic?picSvg(c.t,46):(c.jp?ruby(c.t):esc(c.t))}</span></span></button>`).join('')}</div>`;
+  mtHud();
+}
+function mtHud(){
+  const h=document.getElementById('ghud'); if(!h) return;
+  const sec=Math.floor((Date.now()-MT.t0)/1000);
+  h.innerHTML=`<span class="gstat">${MT.done} / 6 짝</span>
+    <span class="gstat">${poolName()}</span>
+    <button class="gquit" id="quit">그만</button>`;
+}
+function mtTap(el){
+  if(MT.lock) return;
+  const i=+el.dataset.i;
+  if(el.classList.contains('up')||el.classList.contains('gone')) return;
+  el.classList.add('up'); MT.open.push(i);
+  if(MT.open.length<2) return;
+  MT.tries++; MT.lock=true;
+  const [a,b]=MT.open, ca=MT.cards[a], cb=MT.cards[b];
+  const els=document.querySelectorAll('.mc');
+  if(ca.p===cb.p && a!==b){
+    setTimeout(()=>{
+      els[a].classList.add('hit'); els[b].classList.add('hit');
+      setTimeout(()=>{ els[a].classList.add('gone'); els[b].classList.add('gone'); },450);
+      MT.done++; MT.open=[]; MT.lock=false; mtHud();
+      st.pts=(st.pts||0)+8; save();
+      if(MT.done===6) mtOver();
+    },260);
+  } else {
+    setTimeout(()=>{
+      els[a].classList.remove('up'); els[b].classList.remove('up');
+      MT.open=[]; MT.lock=false; mtHud();
+    },760);
+  }
+}
+function mtOver(){
+  const sec=Math.floor((Date.now()-MT.t0)/1000);
+  const best=!st.matchBest||sec<st.matchBest;
+  if(best) st.matchBest=sec;
+  st.pts=(st.pts||0)+30; save();
+  setTimeout(()=>{
+    confetti();
+    document.getElementById('list').innerHTML=`<div class="gtop" id="ghud">
+        <button class="gquit" id="quit">목록으로</button></div>
+      <div class="gdone">
+      ${mochi('proud',60)}
+      <div class="big">${sec}초</div>
+      <div class="sm">${poolName()} 6쌍 완성${best?'<br>가장 빠른 기록입니다':`<br>최고 기록 ${st.matchBest}초`}</div>
+      <button class="gagain" id="again">다시 하기</button></div>`;
+    prog();
+  },600);
+}
+
+/* ── 게임 화면 ── */
+function gameHtml(){
+  return `<div class="gmenu">
+    <button class="gcard" data-game="rain">
+      <span class="gicon">${icon('drop')}</span>
+      <span><h3>글자 비</h3><p>떨어지는 글자가 바닥에 닿기 전에<br>맞는 뜻을 눌러 터뜨리세요</p>
+      <span class="rec">최고 ${st.rainBest||0}점</span></span></button>
+    <button class="gcard" data-game="match">
+      <span class="gicon">${icon('cards')}</span>
+      <span><h3>짝 맞추기</h3><p>카드를 뒤집어 일본어와 뜻을<br>짝지어 보세요</p>
+      <span class="rec">${st.matchBest?'최고 '+st.matchBest+'초':'기록 없음'}</span></span></button>
+  </div>`;
+}
+
+/* ─────────── 보물상자 ─────────── */
+const NEED=10;
+let showAlbum=false;
+function chestSvg(){
+  return `<svg class="cbox" viewBox="0 0 80 80" fill="none" stroke="currentColor"
+    stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <g class="lid"><path d="M14 34V28a26 26 0 0152 0v6z" fill="var(--indigo-soft)"/>
+      <path d="M14 34h52"/></g>
+    <path d="M14 34h52v26a4 4 0 01-4 4H18a4 4 0 01-4-4z" fill="var(--indigo-soft)"/>
+    <rect x="34" y="40" width="12" height="14" rx="3" fill="var(--card)"/>
+    <path d="M40 46v3"/></svg>`;
+}
+function chestHtml(){
+  const ready=(st.keys||0)>0;
+  const left=NEED-((st.hits||0)%NEED);
+  const have=Object.keys(st.got||{}).length;
+  return `<section class="chest ${ready?'ready':''}" id="chest">
+    ${chestSvg()}
+    <div class="ctxt">${ready
+      ? `열쇠 <b>${st.keys}개</b> — 상자를 눌러 보세요`
+      : `정답 <b>${left}문제</b> 더 맞히면 상자가 열립니다`}
+      <br>관용구 ${have} / ${GIFT.length} 수집</div>
+    <button class="act" id="album">${showAlbum?'수집함 닫기':'수집함 열기'}</button>
+    ${showAlbum?`<div class="gset">${GIFT.map(g=>{
+      const has=!!st.got[g.j];
+      return `<div class="gcell ${has?'has':''}">${has
+        ? `<span class="gj">${g.j.replace(/\{[^}]+\}/g,'')}</span><span class="gk">${esc(g.k)}</span>`
+        : '<span class="lock">?</span>'}</div>`;
+    }).join('')}</div>`:''}
+  </section>`;
+}
+function refreshChest(){
+  const el=document.getElementById('chest'); if(!el) return;
+  const t=document.createElement('div'); t.innerHTML=chestHtml();
+  el.replaceWith(t.firstElementChild);
+}
+function confetti(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const c=document.createElement('div'); c.className='conf';
+  const cols=['#A99BD6','#D9A0B3','#D7AC7E','#86C0A7','#90B4D4','#C79BCB'];
+  for(let i=0;i<46;i++){
+    const d=document.createElement('i');
+    d.style.left=Math.random()*100+'%';
+    d.style.background=cols[i%cols.length];
+    d.style.animationDuration=(1.5+Math.random()*1.3)+'s';
+    d.style.animationDelay=(Math.random()*.35)+'s';
+    c.appendChild(d);
+  }
+  document.body.appendChild(c);
+  setTimeout(()=>c.remove(),3400);
+}
+function drawGift(){
+  const roll=Math.random(), tier = roll<.58?1 : roll<.88?2 : 3;
+  const pool=GIFT.filter(g=>g.r===tier);
+  const fresh=pool.filter(g=>!st.got[g.j]);
+  const src=fresh.length?fresh:pool;
+  return src[Math.floor(Math.random()*src.length)];
+}
+function openChest(){
+  const el=document.getElementById('chest');
+  if(!el||!(st.keys>0)||el.classList.contains('busy')) return;
+  el.classList.add('busy','shaking');
+  setTimeout(()=>{
+    el.classList.remove('shaking'); el.classList.add('opened');
+    confetti();
+    const g=drawGift(), dup=!!st.got[g.j];
+    st.keys--; st.got[g.j]=(st.got[g.j]||0)+1; save();
+    const [rn,rc]=RARE[g.r];
+    const sh=document.getElementById('sheet');
+    sh.innerHTML=`<div class="prize">
+      <span class="ptag" style="background:${rc}">${rn}</span>
+      <div class="pjp">${ruby(g.j)}</div>
+      <div class="pkr">${esc(g.k)}</div>
+      <div class="pmean">${esc(g.m)}</div>
+      ${dup?'<div class="dup">이미 가지고 있던 관용구입니다</div>':''}
+      <button class="pclose">받기</button></div>`;
+    sh.hidden=false;
+    setTimeout(()=>{ el.classList.remove('opened','busy'); render(); },700);
+  },1300);
+}
 
 /* ─────────── 음성 ─────────── */
 const SP={
@@ -1222,8 +1864,9 @@ try{
   week = sw!==null ? sw : String(NOWW);
   mode = localStorage.getItem('n3deck:mode')||'list';
   qcat = localStorage.getItem('n3deck:qcat')||'all';
+  glv = localStorage.getItem('n3deck:glv')||'hira';
 }catch(e){ week=String(NOWW); }
-let st={done:{},weak:{},pts:0,streak:0,best:0,today:0,day:''};
+let st={done:{},weak:{},pts:0,streak:0,best:0,today:0,day:'',keys:0,hits:0,got:{},rainBest:0,matchBest:0};
 const KEY='n3deck:v1';
 
 /* 저장소: 아티팩트 환경이면 window.storage, 아니면 브라우저 localStorage */
@@ -1238,7 +1881,7 @@ const store={
   }
 };
 async function load(){
-  try{ const v=await store.get(); if(v) st=Object.assign({done:{},weak:{},pts:0,streak:0,best:0,today:0,day:''},JSON.parse(v)); }catch(e){}
+  try{ const v=await store.get(); if(v) st=Object.assign({done:{},weak:{},pts:0,streak:0,best:0,today:0,day:'',keys:0,hits:0,got:{},rainBest:0,matchBest:0},JSON.parse(v)); }catch(e){}
   const dk=new Date().toLocaleDateString('sv-SE');
   if(st.day!==dk){ st.day=dk; st.today=0; st.streak=0; }
 }
@@ -1248,7 +1891,7 @@ function save(){
   saveT=setTimeout(()=>{ store.set(JSON.stringify(st)); },400);
 }
 
-const data=()=>({g:G,v:V,r:R,k:K,d:D,c:C}[tab]);
+const data=()=>({g:G,v:V,r:R,k:K,d:D,c:C,x:[]}[tab]);
 const QCATS=[['all','전체'],['conj','동사 활용'],['kana','가타카나'],['kanji','빈출 한자'],['weak','★ 약함']];
 const LV=p=>Math.floor((p||0)/300)+1;
 function filtered(){
@@ -1372,11 +2015,18 @@ function render(){
   const draw=({g:cardG,v:cardV,r:cardR,k:cardK,d:cardD,c:cardC}[tab]);
   document.body.dataset.tab=tab;
   document.body.classList.toggle('onecard',mode==='one'&&items.length>0);
+  if(tab==='x'){
+    document.getElementById('pager').hidden=true;
+    document.body.classList.remove('onecard');
+    if(!gameOn){ rnStop(); el.innerHTML=gameHtml(); }
+    prog(); window.scrollTo(0,0); return;
+  }
+  const chest = tab==='c' ? chestHtml() : '';
   const pg=document.getElementById('pager');
   if(mode==='one'&&items.length){
     if(idx>=items.length) idx=0;
     if(idx<0) idx=items.length-1;
-    el.innerHTML=draw(items[idx]);
+    el.innerHTML=chest+draw(items[idx]);
     pg.hidden=false;
     document.getElementById('pageTxt').textContent=`${idx+1} / ${items.length}`;
     document.getElementById('prev').disabled=idx===0;
@@ -1384,15 +2034,15 @@ function render(){
     prog(); window.scrollTo(0,0); return;
   }
   pg.hidden=true;
-  el.innerHTML = items.length
+  el.innerHTML = chest + (items.length
     ? items.map(x=>draw(x)).join('')
     : `<div class="empty">${mochi(week==='weak'?'proud':'sleep',64)}${week==='weak'
         ? '약한 항목이 없습니다.<br>지금은 전부 잡혀 있어요.'
-        : '여기는 아직 비어 있습니다.<br>다른 주차를 골라 보세요.'}</div>`;
+        : '여기는 아직 비어 있습니다.<br>다른 주차를 골라 보세요.'}</div>`);
   prog();
   window.scrollTo(0,0);
 }
-const TABNAME={g:'문법',v:'어휘·한자',d:'헷갈리는 문법',k:'헷갈리는 한자',c:'동사 활용',r:'독해'};
+const TABNAME={g:'문법',v:'어휘·한자',d:'헷갈리는 문법',k:'헷갈리는 한자',c:'동사 활용',r:'독해',x:'미니 게임'};
 function prog(){
   const d=data(), done=d.filter(x=>st.done[x.id]).length;
   const pct=d.length?done/d.length*100:0;
@@ -1400,8 +2050,20 @@ function prog(){
   ALLSETS().forEach(set=>{ at+=set.length; ad+=set.filter(x=>st.done[x.id]).length; });
   const ap=at?ad/at*100:0;
   const mood=ap===0?'sleep':ap>=100?'proud':ap>=50?'happy':'ok';
+  if(tab==='x'){
+    const h=document.getElementById('hero');
+    h.className='hero'+(gameOn?' sm':'');
+    h.innerHTML=`
+      <div class="hcol">
+        <div class="hkick">Lv.${LV(st.pts)} · ${(st.pts||0).toLocaleString()}P</div>
+        <div class="htitle">${gameOn==='rain'?'글자 비':gameOn==='match'?'짝 맞추기':'미니 게임'}</div>
+        ${gameOn?'':`<div class="hsub">${poolName()}로 연습합니다</div>`}
+      </div>${mochi(gameOn?'happy':'ok',gameOn?38:52)}`;
+    return;
+  }
   if(tab==='c'){
     const label=(QCATS.find(q=>q[0]===qcat)||['','전체'])[1];
+    document.getElementById('hero').className='hero';
     document.getElementById('hero').innerHTML=`
       <div class="hcol">
         <div class="hkick">Lv.${LV(st.pts)} · ${(st.pts||0).toLocaleString()}P</div>
@@ -1417,6 +2079,7 @@ function prog(){
       </div>${mochi(mood,52)}`;
     return;
   }
+  document.getElementById('hero').className='hero';
   const scope = week==='all'?'전체':week==='weak'?'★ 약한 것':week+'주차';
   document.getElementById('hero').innerHTML=`
     <div class="hcol">
@@ -1429,6 +2092,12 @@ function prog(){
 
 function chips(){
   const c=document.getElementById('chips');
+  if(tab==='x'){
+    c.innerHTML=LEVELS.map(l=>
+      `<button class="chip lvc" data-g="${l.id}" aria-pressed="${glv===l.id}">
+        <b>${l.n}</b><i>${l.s}</i></button>`).join('');
+    return;
+  }
   if(tab==='c'){
     c.innerHTML=QCATS.map(([v,l])=>
       `<button class="chip ${v==='weak'?'weak':''}" data-c="${v}" aria-pressed="${qcat===v}">${l}</button>`).join('');
@@ -1445,6 +2114,12 @@ function chips(){
 document.getElementById('chips').addEventListener('click',e=>{
   const b=e.target.closest('.chip'); if(!b) return;
   idx=0; SP.stop();
+  if(b.dataset.g!==undefined){
+    glv=b.dataset.g;
+    try{ localStorage.setItem('n3deck:glv',glv); }catch(err){}
+    if(gameOn==='rain') rnStart(); else if(gameOn==='match') mtStart();
+    chips(); return;
+  }
   if(b.dataset.c!==undefined){ qcat=b.dataset.c; try{ localStorage.setItem('n3deck:qcat',qcat); }catch(err){} }
   else { week=b.dataset.w; try{ localStorage.setItem('n3deck:week',week); }catch(err){} }
   chips(); render();
@@ -1455,7 +2130,7 @@ document.querySelectorAll('nav button[data-ic]').forEach(b=>{
 });
 document.querySelector('nav').addEventListener('click',e=>{
   const b=e.target.closest('button[data-tab]'); if(!b) return;
-  tab=b.dataset.tab; idx=0; SP.stop(); chips();
+  tab=b.dataset.tab; idx=0; SP.stop(); rnStop(); if(tab!=='x') gameOn=null; chips();
   document.querySelectorAll('nav button').forEach(n=>n.setAttribute('aria-selected',n===b));
   render();
 });
@@ -1500,8 +2175,11 @@ document.getElementById('list').addEventListener('click',e=>{
       card.querySelector('.act.wk').setAttribute('aria-pressed',String(!hit));
       const lv0=LV(st.pts);
       let gain=0;
+      let gotKey=false;
       if(hit){ gain=10+Math.min(st.streak,10)*2; st.pts=(st.pts||0)+gain; st.streak=(st.streak||0)+1;
-               if(st.streak>(st.best||0)) st.best=st.streak; }
+               if(st.streak>(st.best||0)) st.best=st.streak;
+               st.hits=(st.hits||0)+1;
+               if(st.hits%NEED===0){ st.keys=(st.keys||0)+1; gotKey=true; } }
       else { st.streak=0; }
       st.today=(st.today||0)+1;
       const lvup = LV(st.pts)>lv0;
@@ -1512,8 +2190,13 @@ document.getElementById('list').addEventListener('click',e=>{
       rc.innerHTML=mochi(hit?'happy':'sad',34)+`<span class="msg">${msg}</span>`+
         (hit?`<span class="gain">+${gain}P${st.streak>=3?' '+icon('fire')+st.streak:''}</span>`:'');
       rc.hidden=false;
-      if(lvup){ const b=document.createElement('div'); b.className='ktip';
-        b.textContent=`레벨 ${LV(st.pts)} 달성.`; rc.after(b); }
+      if(lvup||gotKey){
+        const b=document.createElement('div'); b.className='ktip';
+        b.textContent=[lvup?`레벨 ${LV(st.pts)} 달성.`:'',gotKey?'상자 열쇠를 하나 얻었습니다. 위로 올려보세요.':'']
+          .filter(Boolean).join(' ');
+        rc.after(b);
+      }
+      if(gotKey) refreshChest();
     }
     return;
   }
@@ -1556,6 +2239,27 @@ document.addEventListener('keydown',e=>{
   if(e.key==='ArrowLeft') step(-1);
 });
 
+document.getElementById('list').addEventListener('click',e=>{
+  const gc=e.target.closest('[data-game]');
+  if(gc){ gameOn=gc.dataset.game; chips();
+    if(gameOn==='rain') rnStart(); else mtStart(); prog(); return; }
+  if(e.target.closest('.gopt')){ rnHit(e.target.closest('.gopt')); return; }
+  if(e.target.closest('.mc')){ mtTap(e.target.closest('.mc')); return; }
+  if(e.target.closest('#again')){ if(gameOn==='rain') rnStart(); else mtStart(); prog(); return; }
+  if(e.target.closest('#album')){ showAlbum=!showAlbum; render(); return; }
+  if(e.target.closest('.gset')) return;
+  if(e.target.closest('#chest')) openChest();
+});
+document.getElementById('sheet').addEventListener('click',e=>{
+  if(e.target.closest('.pclose')||e.target.id==='sheet'){
+    document.getElementById('sheet').hidden=true; render();
+  }
+});
+
+document.addEventListener('click',e=>{
+  if(!e.target.closest('#quit')) return;
+  rnStop(); gameOn=null; chips(); render();
+});
 document.getElementById('hero').addEventListener('click',e=>{
   if(!e.target.closest('#shuf')) return;
   shuf(C); idx=0; SP.stop(); render();
